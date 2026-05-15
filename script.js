@@ -392,7 +392,82 @@ function buildPoseLibrary() {
   return generated;
 }
 
-const poses = buildPoseLibrary();
+const customHandstandBuilderPoses = [
+  {
+    name: "Toes and Nose Handstand",
+    originalBase: "Toes and Nose Handstand",
+    section: "Handstand",
+    area: "Custom handstand builder",
+    level: "Base",
+    cue: "Face the wall with toes and nose close to the wall; push tall through the shoulders and keep ribs contained.",
+    image: "assets/avatars-custom/toes-and-nose-handstand.png",
+  },
+  {
+    name: "Handstand Wall Walks",
+    originalBase: "Handstand Wall Walks",
+    section: "Handstand",
+    area: "Custom handstand builder",
+    level: "Intermediate",
+    cue: "Walk feet up the wall and hands in only as far as you can keep a clean hollow line.",
+    image: "assets/avatars-custom/handstand-wall-walks.png",
+  },
+  {
+    name: "Tuck Entry",
+    originalBase: "Tuck Entry",
+    section: "Handstand",
+    area: "Custom handstand builder",
+    level: "Intermediate",
+    cue: "Enter compact with knees pulled in before extending toward the handstand line.",
+    image: "assets/avatars-custom/tuck-entry.png",
+  },
+  {
+    name: "Straddle Entry",
+    originalBase: "Straddle Entry",
+    section: "Handstand",
+    area: "Custom handstand builder",
+    level: "Intermediate",
+    cue: "Open the legs wide to control momentum and find the stack before bringing the legs together.",
+    image: "assets/avatars-custom/straddle-entry.png",
+  },
+  {
+    name: "Pike Handstand Entry",
+    originalBase: "Pike Handstand Entry",
+    section: "Handstand",
+    area: "Custom handstand builder",
+    level: "Advanced",
+    cue: "Keep legs together, hips high, and shoulders elevated as you float from pike toward the line.",
+    image: "assets/avatars-custom/pike-handstand-entry.png",
+  },
+  {
+    name: "Compression Pike Lifts",
+    originalBase: "Compression Pike Lifts",
+    section: "Handstand",
+    area: "Custom handstand builder",
+    level: "Base",
+    cue: "Press hands beside the legs and lift heels or legs using hip flexor compression instead of momentum.",
+    image: "assets/avatars-custom/compression-pike-lifts.png",
+  },
+  {
+    name: "Freestanding Endurance Holds",
+    originalBase: "Freestanding Endurance Holds",
+    section: "Handstand",
+    area: "Custom handstand builder",
+    level: "Advanced",
+    cue: "Hold only while the line stays organized; use fingertip pressure and shoulder height to correct balance.",
+    image: "assets/avatars-custom/freestanding-endurance-holds.png",
+  },
+  {
+    name: "Wall Supported One Arm Shifts",
+    originalBase: "Wall Supported One Arm Shifts",
+    section: "Handstand",
+    area: "Custom handstand builder",
+    level: "Advanced",
+    cue: "Use the wall while shifting weight from one hand to the other without dropping shoulder height.",
+    image: "assets/avatars-custom/wall-supported-one-arm-shifts.png",
+  },
+];
+
+const poses = [...customHandstandBuilderPoses, ...buildPoseLibrary()];
 
 const warmupOptions = poses
   .filter((pose) => pose.section === "Elasticity")
