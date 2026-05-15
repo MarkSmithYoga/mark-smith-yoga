@@ -180,6 +180,45 @@ const movementFamilies = [
     ],
   },
   {
+    section: "Wrist Prep",
+    area: "Wrist capacity",
+    level: "Base",
+    items: [
+      ["Wrist CARs", "Draw slow controlled circles through the wrist without rushing the end range."],
+      ["Finger Tendon Waves", "Move from straight hand to hook fist to full fist to warm the finger tendons."],
+      ["Palm Heel Lift-Offs", "Keep fingers grounded and lift the heel of the palm to wake wrist flexion control."],
+      ["Finger Pad Presses", "Press each finger pad down to connect the fingers to the palm line."],
+      ["Knuckle Push-Up Prep", "Use a gentle fist position to prepare the wrist without deep extension."],
+      ["Back-of-Hand Rock", "Place the back of the hand lightly down and rock only within a pain-free range."],
+      ["Prayer Wrist Pulse", "Press palms together and pulse the hands downward while shoulders stay relaxed."],
+      ["Reverse Prayer Prep", "Bring backs of hands or palms behind the body and breathe into wrist flexion."],
+      ["Tabletop Forward Rock", "Rock shoulders forward over wrists while pressing through every knuckle."],
+      ["Tabletop Lateral Rock", "Shift side to side to prepare uneven hand loading."],
+      ["Tabletop Wrist Circles", "Circle the shoulders around the hands to warm multiple wrist angles."],
+      ["Fingertip Plank Lean", "Use fingertips as brakes while leaning forward in a short plank."],
+      ["Palm Suction Drill", "Grip the floor lightly with finger pads without clawing."],
+      ["Wrist Extension Isometric", "Press the fingers into the floor and hold a low-intensity extension angle."],
+      ["Wrist Flexion Isometric", "Press the backs of the hands gently down and hold without sharp sensation."],
+      ["Forearm Pronation Supination", "Rotate palms up and down with elbows bent to warm the forearm line."],
+      ["Radial Ulnar Deviation", "Move the hand side to side like a windshield wiper."],
+      ["Loaded Wrist Wave", "Roll pressure from palm heel to knuckles and back in tabletop."],
+      ["Single-Arm Wrist Lean", "Shift a little more weight into one hand while the other hand assists."],
+      ["Wall Finger Push", "Press fingers into the wall and rebound lightly to wake finger strength."],
+      ["Wall Wrist Extension Lean", "Lean into palms on the wall before moving the shape to the floor."],
+      ["Wrist Push-Up From Knees", "Use a tiny range to lift and lower the palm heel with knees down."],
+      ["Fist to Palm Transition", "Move from fists to flat hands slowly to prepare changing hand shapes."],
+      ["Planche Lean Prep", "Lean shoulders beyond wrists with elbows straight and ribs organized."],
+      ["Wrist Shake Reset", "Shake out hands and forearms between loading sets to reduce guarding."],
+      ["Forearm Soft-Tissue Glide", "Use the opposite hand to glide along flexors and extensors before loading."],
+      ["Rubber Band Finger Opens", "Open fingers against light resistance to balance gripping work."],
+      ["Thumb Line Prep", "Move the thumb through circles and light opposition for broader hand support."],
+      ["Wrist Cooldown Fold", "Fold hands gently in flexion after loaded handstand or arm-balance work."],
+      ["Quadruped Finger Turn-Out", "Turn fingers outward gradually and shift only as far as the wrist stays calm."],
+      ["Quadruped Finger Turn-Back", "Turn fingers toward knees and lean back gently to open forearm flexors."],
+      ["Straight-Arm Palm Drag", "Drag the palms toward the knees without moving them to build isometric strength."],
+    ],
+  },
+  {
     section: "Mobility",
     area: "Primary-inspired vinyasa",
     level: "Base",
@@ -322,6 +361,36 @@ const movementFamilies = [
       ["Elbow Lever Line", "Balance body tension across the elbows."],
       ["QDR Freeze Prep", "Load one bent arm and organize the side body."],
       ["Side Plank Float", "Build lateral shoulder stability before freeze work."],
+      ["Crane Hold", "Straighten the arms more fully while knees stay high on the upper arms."],
+      ["Crow to Tripod Transition", "Lower with control from hand balance toward a head-supported base."],
+      ["Tripod Egg Balance", "Use a compact shape to build neck-aware tripod control."],
+      ["Tripod Straddle Balance", "Open the legs wide while keeping the head and hands evenly loaded."],
+      ["Tripod Pike Balance", "Keep legs together and hips high in a compressed tripod line."],
+      ["Forearm Crow Prep", "Load knees onto upper arms from a forearm base."],
+      ["Dragonfly Prep", "Hook one foot across the arm and rotate before shifting weight."],
+      ["Flying Splits Prep", "Use a lunge-like arm balance shape with one leg reaching back."],
+      ["One-Leg Crow Prep", "Extend one leg back from crow while keeping elbows hugging in."],
+      ["Crow Jump-Back Prep", "Compress and float the feet back with quiet shoulders."],
+      ["Crow Jump-Through Prep", "Thread legs forward from hand support with hip compression."],
+      ["Elephant Trunk Prep", "Hook one leg high over the arm and lift the hips with straight-arm pressure."],
+      ["Koundinya Split Prep", "Rotate and split the legs from a side-arm balance base."],
+      ["Side Crow Scissor Prep", "Extend one leg from side crow while keeping the twist stable."],
+      ["Baby Crow Prep", "Use forearms and knees to learn compact arm-balance pressure."],
+      ["Flying Lizard Prep", "Thread the shoulder under the leg and shift into hand support."],
+      ["Handstand Crow Negative", "Lower from handstand toward crow with compression."],
+      ["Crow Press Lean", "Lean forward enough to make the hips light before trying to press."],
+      ["Planche Tuck Lean", "Round upper back and lean forward with knees tucked."],
+      ["Pseudo Planche Push-Up", "Use turned-out hands and forward lean for straight-arm strength."],
+      ["L-Sit Lift Prep", "Press hands down and lift the hips or heels from the floor."],
+      ["Tuck Sit Hold", "Compress knees toward chest while pushing the floor away."],
+      ["Straddle Sit Lift", "Lift heels in a wide seated shape with active quads."],
+      ["Manna Line Prep", "Lean back and press hands down to train deep shoulder extension."],
+      ["Breakdance Chair Freeze Prep", "Load one elbow into the torso and extend the legs with control."],
+      ["Turtle Freeze Prep", "Balance low with elbows connected to torso and legs tucked."],
+      ["Shoulder Freeze Prep", "Use shoulder and side-body contact to understand freeze alignment."],
+      ["One-Hand Side Plank Lean", "Prepare single-arm side support with feet staggered."],
+      ["Air Baby Switch Prep", "Shift between air-baby sides without collapsing into the shoulder."],
+      ["Freeze Exit Step-Through", "Practice exiting freezes into a controlled lunge or seated shape."],
     ],
   },
   {
@@ -353,17 +422,6 @@ const movementFamilies = [
   },
 ];
 
-const variationMethods = [
-  ["Base hold", "Hold the shape and breathe steadily."],
-  ["Elastic pulses", "Use small rhythmic pulses without forcing end range."],
-  ["Slow eccentric", "Move into the shape slowly and resist the return."],
-  ["Isometric press", "Press into the floor, wall, or prop for 5 breaths."],
-  ["Active lift-off", "Lift away from the support using the target muscles."],
-  ["Transition link", "Connect the movement to the next pose in a smooth flow."],
-  ["Prop-supported", "Use blocks, wall, strap, or blanket to make the range precise."],
-  ["End-range breath", "Stay near the edge and use slow exhales to reduce guarding."],
-];
-
 function slugify(value) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 }
@@ -372,19 +430,15 @@ function buildPoseLibrary() {
   const generated = [];
 
   movementFamilies.forEach((family) => {
-    family.items.forEach(([name, cue], itemIndex) => {
-      variationMethods.forEach(([method, methodCue], methodIndex) => {
-        if (generated.length >= 240) return;
-        const poseName = methodIndex === 0 ? name : `${name} - ${method}`;
-        generated.push({
-          name: poseName,
-          originalBase: name,
-          section: family.section,
-          area: family.area,
-          level: methodIndex > 4 ? "Advanced" : family.level,
-          cue: `${cue} ${methodCue}`,
-          image: `assets/avatars/${slugify(name)}.png`,
-        });
+    family.items.forEach(([name, cue]) => {
+      generated.push({
+        name,
+        originalBase: name,
+        section: family.section,
+        area: family.area,
+        level: family.level,
+        cue,
+        image: `assets/avatars/${slugify(name)}.png`,
       });
     });
   });
