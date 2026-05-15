@@ -545,6 +545,127 @@ h2 {
   padding-left: 18px;
 }
 
+.printable-flow-section {
+  background: #120c0d;
+}
+
+.flow-program-grid {
+  display: grid;
+  gap: 22px;
+}
+
+.flow-program-card {
+  background: #111112;
+  border: 1px solid var(--line);
+  padding: clamp(22px, 4vw, 34px);
+}
+
+.flow-program-header {
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 22px;
+  padding-bottom: 22px;
+}
+
+.flow-program-header p {
+  color: var(--clay);
+  font-size: 0.75rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.flow-program-header h3 {
+  font-size: clamp(1.55rem, 3vw, 2.6rem);
+  margin-bottom: 8px;
+}
+
+.flow-program-header span {
+  color: var(--muted);
+}
+
+.flow-program-body {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.flow-program-body strong {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.flow-program-body p,
+.flow-program-body li {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.flow-program-body ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.flow-sequence-list {
+  counter-reset: flow-step;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  list-style: none;
+  margin: 26px 0 0;
+  padding: 0;
+}
+
+.flow-sequence-list li {
+  background: rgba(225, 38, 28, 0.08);
+  border: 1px solid rgba(225, 38, 28, 0.18);
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+}
+
+.flow-sequence-list li::before {
+  color: var(--clay);
+  content: counter(flow-step, decimal-leading-zero);
+  counter-increment: flow-step;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.flow-avatar-slot {
+  align-items: center;
+  aspect-ratio: 1;
+  background: var(--charcoal);
+  border: 1px solid var(--line);
+  display: flex;
+  justify-content: center;
+  min-height: 92px;
+}
+
+.flow-avatar-slot img {
+  display: block;
+  height: 100%;
+  object-fit: contain;
+  padding: 6px;
+  width: 100%;
+}
+
+.flow-avatar-slot em {
+  color: var(--clay);
+  font-style: normal;
+  font-weight: 800;
+}
+
+.flow-sequence-list strong {
+  font-size: 0.92rem;
+  line-height: 1.25;
+}
+
+.print-flow-button {
+  margin-top: 24px;
+}
+
 .site-footer {
   background: var(--charcoal);
   color: rgba(255, 255, 255, 0.72);
@@ -788,6 +909,7 @@ h2 {
   .warmup-grid,
   .builder-layout,
   .template-grid,
+  .flow-program-body,
   .chapter-page-layout {
     grid-template-columns: 1fr;
   }
@@ -831,6 +953,10 @@ h2 {
     grid-template-columns: 1fr;
   }
 
+  .flow-sequence-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .mini-flow span:nth-child(even) {
     margin-left: 0;
   }
@@ -860,7 +986,12 @@ h2 {
   .site-footer,
   .back-link,
   .print-actions,
-  .nav-links {
+  .nav-links,
+  .hero,
+  .stats-band,
+  .intro,
+  .section:not(.printable-flow-section),
+  .print-flow-button {
     display: none !important;
   }
 
@@ -908,8 +1039,43 @@ h2 {
 
   .guide-panel details,
   #offline-practice li,
-  .offline-notes {
+  .offline-notes,
+  .flow-program-card,
+  .flow-sequence-list li {
     border: 1px solid #cccccc;
     break-inside: avoid;
+  }
+
+  .printable-flow-section {
+    background: #ffffff;
+    color: #111111;
+    padding: 0;
+  }
+
+  .flow-program-grid,
+  .flow-program-body {
+    display: block;
+  }
+
+  .flow-program-card {
+    background: #ffffff;
+    margin-bottom: 24pt;
+    padding: 12pt;
+    page-break-after: always;
+  }
+
+  .flow-program-header p,
+  .flow-program-header span,
+  .flow-program-body p,
+  .flow-program-body li {
+    color: #222222;
+  }
+
+  .flow-sequence-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .flow-sequence-list li {
+    background: #ffffff;
   }
 }

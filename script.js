@@ -426,6 +426,104 @@ const flowTemplates = [
   },
 ];
 
+const printableFlowPrograms = [
+  {
+    title: "Primary-Inspired Mobility Flow",
+    subtitle: "Long-form vinyasa map with mobility-focused cueing",
+    duration: "75-90 min",
+    intention:
+      "A structured full-body flow inspired by the arc of a traditional primary practice, translated into modern mobility language.",
+    cues: [
+      "Keep transitions smooth and repeatable before increasing depth.",
+      "Use active feet, soft knees, and controlled breathing in forward folds.",
+      "Treat seated folds as hamstring and spine organization, not passive collapse.",
+      "Use props for lotus-like hip shapes so the knees stay quiet.",
+    ],
+    sequence: [
+      "Breath-led standing reach",
+      "Forward fold toe grip",
+      "Chair power fold",
+      "Warrior one hip drive",
+      "Triangle long-line reach",
+      "Revolved triangle line",
+      "Wide fold center line",
+      "Side lunge floor switch",
+      "Balance toe hold prep",
+      "Side balance leg open",
+      "Seated forward fold active",
+      "Reverse plank line",
+      "One-leg fold three angles",
+      "Marichi twist prep",
+      "Boat hold pulses",
+      "Turtle fold prep",
+      "Wide seated compression",
+      "Bridge to wheel prep",
+      "Fish chest opener",
+      "Rest shape",
+    ],
+  },
+  {
+    title: "Power Vinyasa Flow Packet",
+    subtitle: "Baptiste-inspired structure with original movement language",
+    duration: "45-60 min",
+    intention:
+      "A strong power-vinyasa format using heat, standing strength, core, back opening, hip opening, and integration.",
+    cues: [
+      "Build heat through breath and rhythm before asking for bigger shapes.",
+      "Prioritize spinal length in twisting and side-body positions.",
+      "Use arm balances as optional skill inserts rather than mandatory peak poses.",
+      "Close with hips, twists, and quiet breath to absorb the work.",
+    ],
+    sequence: [
+      "Child to down dog wave",
+      "Ragdoll spine pour",
+      "Crescent lunge reach",
+      "Revolved crescent coil",
+      "Warrior two lateral reach",
+      "Extended side angle spiral",
+      "Triangle strength hold",
+      "Eagle wrap balance",
+      "Airplane hinge",
+      "Half moon wall line",
+      "Crow load prep",
+      "Side plank line",
+      "Locust back-line lift",
+      "Floor bow rock",
+      "Camel breath lift",
+      "Half pigeon active",
+      "Double pigeon stack",
+      "Supine twist reset",
+      "Bound-angle rest",
+      "Rest shape",
+    ],
+  },
+  {
+    title: "Handstand Prep Flow Insert",
+    subtitle: "Printable bridge between warm-up and skill work",
+    duration: "20-30 min",
+    intention:
+      "A compact flow section for wrists, shoulders, hollow line, wall work, and safe entry/exit practice.",
+    cues: [
+      "Stop each drill while the shape is still clean.",
+      "Use fingertips as brakes and shoulder elevation as the main support strategy.",
+      "Exit practice belongs before long holds.",
+      "Choose 5-7 elastic warm-ups before this section.",
+    ],
+    sequence: [
+      "Wall wrist spring",
+      "Tabletop wrist rock",
+      "Scapular push-up",
+      "Down dog shoulder shrug",
+      "Wall hollow body",
+      "Wall plank line",
+      "Chest-to-wall hold",
+      "Toe pull balance",
+      "Tuck entry accuracy",
+      "Freestanding exit map",
+    ],
+  },
+];
+
 const sectionListEl = document.querySelector("#section-list");
 const poseGridEl = document.querySelector("#pose-grid");
 const builderFlowEl = document.querySelector("#builder-flow");
@@ -433,6 +531,7 @@ const warmupGridEl = document.querySelector("#warmup-grid");
 const selectedWarmupsEl = document.querySelector("#selected-warmups");
 const warmupCountEl = document.querySelector("#warmup-count");
 const templateGridEl = document.querySelector("#template-grid");
+const flowProgramGridEl = document.querySelector("#flow-program-grid");
 const filterButtons = document.querySelectorAll(".filter-button");
 const selectedWarmups = new Set();
 
@@ -578,6 +677,56 @@ function renderTemplates() {
     .join("");
 }
 
+function renderPrintableFlows() {
+  if (!flowProgramGridEl) return;
+
+  flowProgramGridEl.innerHTML = printableFlowPrograms
+    .map(
+      (program) => `
+        <article class="flow-program-card">
+          <div class="flow-program-header">
+            <p>${program.duration}</p>
+            <h3>${program.title}</h3>
+            <span>${program.subtitle}</span>
+          </div>
+          <div class="flow-program-body">
+            <div>
+              <strong>Teaching intention</strong>
+              <p>${program.intention}</p>
+            </div>
+            <div>
+              <strong>Key cues</strong>
+              <ul>
+                ${program.cues.map((cue) => `<li>${cue}</li>`).join("")}
+              </ul>
+            </div>
+          </div>
+          <ol class="flow-sequence-list">
+            ${program.sequence
+              .map(
+                (item) => `
+                  <li>
+                    <span class="flow-avatar-slot">
+                      <img src="assets/avatars/${slugify(item)}.png" alt="" onerror="this.hidden = true; this.nextElementSibling.hidden = false;" />
+                      <em hidden>${initials(item)}</em>
+                    </span>
+                    <strong>${item}</strong>
+                  </li>
+                `,
+              )
+              .join("")}
+          </ol>
+          <button class="button secondary print-flow-button" type="button">Print this flow</button>
+        </article>
+      `,
+    )
+    .join("");
+
+  flowProgramGridEl.querySelectorAll(".print-flow-button").forEach((button) => {
+    button.addEventListener("click", () => window.print());
+  });
+}
+
 function getSectionIndex() {
   const params = new URLSearchParams(window.location.search);
   const requested = Number(params.get("chapter"));
@@ -669,4 +818,5 @@ renderBuilderFlow();
 renderWarmups();
 renderSelectedWarmups();
 renderTemplates();
+renderPrintableFlows();
 renderSectionPage(getSectionIndex());
