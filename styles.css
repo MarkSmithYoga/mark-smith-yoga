@@ -413,6 +413,24 @@ h2 {
   line-height: 1.55;
 }
 
+.add-pose-button,
+.remove-pose-button {
+  background: rgba(225, 38, 28, 0.16);
+  border: 1px solid rgba(225, 38, 28, 0.42);
+  color: var(--ink);
+  cursor: pointer;
+  font-weight: 800;
+  margin-top: 12px;
+  padding: 9px 12px;
+  text-align: center;
+}
+
+.add-pose-button:hover,
+.remove-pose-button:hover {
+  background: var(--clay);
+  color: var(--white);
+}
+
 .builder-layout {
   grid-template-columns: 1fr 1fr;
 }
@@ -517,6 +535,27 @@ h2 {
 
 .builder-column li {
   line-height: 1.65;
+}
+
+#builder-flow {
+  list-style: none;
+  padding-left: 0;
+}
+
+#builder-flow li {
+  border: 1px solid var(--line);
+  padding: 14px;
+}
+
+#builder-flow span,
+#builder-flow small {
+  color: var(--muted);
+  display: block;
+}
+
+#builder-flow strong {
+  display: block;
+  margin: 4px 0;
 }
 
 .template-grid {

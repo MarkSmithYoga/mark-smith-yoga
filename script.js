@@ -383,7 +383,7 @@ function buildPoseLibrary() {
           area: family.area,
           level: methodIndex > 4 ? "Advanced" : family.level,
           cue: `${cue} ${methodCue}`,
-          image: `assets/avatars/${slugify(poseName)}.png`,
+          image: `assets/avatars/${slugify(name)}.png`,
         });
       });
     });
@@ -534,6 +534,7 @@ const templateGridEl = document.querySelector("#template-grid");
 const flowProgramGridEl = document.querySelector("#flow-program-grid");
 const filterButtons = document.querySelectorAll(".filter-button");
 const selectedWarmups = new Set();
+const selectedFlow = [];
 
 const metaEl = document.querySelector("#chapter-meta");
 const titleEl = document.querySelector("#chapter-title");
@@ -585,11 +586,21 @@ function renderPoses(filter = "All") {
             <h3>${pose.name}</h3>
             <span>${pose.originalBase || "Movement variation"}</span>
             <small>${pose.cue}</small>
+            <button class="add-pose-button" type="button" data-pose="${pose.name}">Add to flow</button>
           </div>
         </article>
       `,
     )
     .join("");
+
+  poseGridEl.querySelectorAll(".add-pose-button").forEach((button) => {
+    button.addEventListener("click", () => {
+      const pose = poses.find((item) => item.name === button.dataset.pose);
+      if (!pose) return;
+      selectedFlow.push(pose);
+      renderBuilderFlow();
+    });
+  });
 }
 
 function initials(name) {
@@ -604,15 +615,37 @@ function initials(name) {
 function renderBuilderFlow() {
   if (!builderFlowEl) return;
 
-  const defaultFlow = [
-    "Joint prep and breath rhythm",
-    "Pose selection by body area",
-    "Peak focus or range target",
-    "Avatar PDF flow sheet",
-    "Printable cues and timing",
-  ];
+  if (!selectedFlow.length) {
+    const defaultFlow = [
+      "Use the pose library filters above.",
+      "Click Add to flow on 5-12 movements.",
+      "Start with elasticity or joint prep.",
+      "Add your peak skill or range target.",
+      "Print the page or save it as a PDF.",
+    ];
+    builderFlowEl.innerHTML = defaultFlow.map((item) => `<li>${item}</li>`).join("");
+    return;
+  }
 
-  builderFlowEl.innerHTML = defaultFlow.map((item) => `<li>${item}</li>`).join("");
+  builderFlowEl.innerHTML = selectedFlow
+    .map(
+      (pose, index) => `
+        <li>
+          <span>${pose.section}</span>
+          <strong>${pose.name}</strong>
+          <small>${pose.cue}</small>
+          <button class="remove-pose-button" type="button" data-index="${index}">Remove</button>
+        </li>
+      `,
+    )
+    .join("");
+
+  builderFlowEl.querySelectorAll(".remove-pose-button").forEach((button) => {
+    button.addEventListener("click", () => {
+      selectedFlow.splice(Number(button.dataset.index), 1);
+      renderBuilderFlow();
+    });
+  });
 }
 
 function renderWarmups() {
