@@ -68,8 +68,8 @@
           <span>practice sections</span>
         </div>
         <div>
-          <strong>24</strong>
-          <span>starter poses</span>
+          <strong>200+</strong>
+          <span>poses and variations</span>
         </div>
         <div>
           <strong>PDF</strong>
@@ -100,17 +100,39 @@
       <section class="section library-section" id="pose-library" aria-labelledby="library-title">
         <div class="section-heading">
           <p class="eyebrow">Pose selection</p>
-          <h2 id="library-title">Search by purpose, body area, and skill demand.</h2>
+          <h2 id="library-title">Search 200+ movements by purpose, body area, and skill demand.</h2>
         </div>
 
         <div class="filter-bar" aria-label="Pose filters">
           <button class="filter-button is-active" type="button" data-filter="All">All</button>
+          <button class="filter-button" type="button" data-filter="Elasticity">Elasticity</button>
           <button class="filter-button" type="button" data-filter="Mobility">Mobility</button>
           <button class="filter-button" type="button" data-filter="Handstand">Handstand</button>
           <button class="filter-button" type="button" data-filter="Flexibility">Flexibility</button>
+          <button class="filter-button" type="button" data-filter="Arm Balance">Arm Balance</button>
         </div>
 
         <div class="pose-grid" id="pose-grid"></div>
+      </section>
+
+      <section class="section warmup-section" id="elastic-warmups" aria-labelledby="warmup-title">
+        <div class="section-heading">
+          <p class="eyebrow">Elasticity warm-up lab</p>
+          <h2 id="warmup-title">Pick 5-7 low-impact movements before handstand work.</h2>
+          <p>
+            These options use gentle oscillation, reciprocal loading, and viscoelastic tissue
+            prep so the shoulders, wrists, spine, hips, and hamstrings feel springy without
+            being overworked.
+          </p>
+        </div>
+        <div class="warmup-layout">
+          <div class="warmup-grid" id="warmup-grid"></div>
+          <aside class="selected-panel">
+            <p class="eyebrow">Selected warm-up</p>
+            <h3 id="warmup-count">0 selected</h3>
+            <ol id="selected-warmups"></ol>
+          </aside>
+        </div>
       </section>
 
       <section class="section builder-section" id="sequence-builder" aria-labelledby="builder-title">
@@ -133,6 +155,7 @@
             </ul>
           </div>
         </div>
+        <div class="template-grid" id="template-grid"></div>
       </section>
     </main>
 

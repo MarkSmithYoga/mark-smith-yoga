@@ -384,6 +384,14 @@ h2 {
   font-weight: 800;
 }
 
+.pose-avatar img {
+  display: block;
+  height: 100%;
+  object-fit: contain;
+  padding: 8px;
+  width: 100%;
+}
+
 .pose-card-item p {
   color: var(--clay);
   font-size: 0.72rem;
@@ -407,6 +415,80 @@ h2 {
 
 .builder-layout {
   grid-template-columns: 1fr 1fr;
+}
+
+.warmup-section {
+  background: var(--paper);
+}
+
+.warmup-layout {
+  align-items: start;
+  display: grid;
+  gap: 18px;
+  grid-template-columns: minmax(0, 1fr) 340px;
+}
+
+.warmup-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.warmup-card {
+  background: #111112;
+  border: 1px solid var(--line);
+  cursor: pointer;
+  display: grid;
+  gap: 10px;
+  min-height: 170px;
+  padding: 18px;
+}
+
+.warmup-card:has(input:checked) {
+  background: rgba(225, 38, 28, 0.16);
+  border-color: rgba(225, 38, 28, 0.76);
+}
+
+.warmup-card input {
+  accent-color: var(--clay);
+  height: 18px;
+  width: 18px;
+}
+
+.warmup-card span,
+.template-card p {
+  color: var(--clay);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.warmup-card strong {
+  line-height: 1.25;
+}
+
+.warmup-card small {
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.selected-panel {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  padding: 24px;
+  position: sticky;
+  top: 92px;
+}
+
+.selected-panel h3 {
+  margin-bottom: 18px;
+}
+
+.selected-panel ol {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding-left: 20px;
 }
 
 .builder-column {
@@ -435,6 +517,32 @@ h2 {
 
 .builder-column li {
   line-height: 1.65;
+}
+
+.template-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 18px;
+}
+
+.template-card {
+  background: #111112;
+  border: 1px solid var(--line);
+  padding: 24px;
+}
+
+.template-card h3 {
+  font-size: 1.1rem;
+}
+
+.template-card ol {
+  color: var(--muted);
+  display: grid;
+  gap: 8px;
+  line-height: 1.55;
+  margin: 16px 0 0;
+  padding-left: 18px;
 }
 
 .site-footer {
@@ -676,7 +784,10 @@ h2 {
   .intro,
   .section-grid,
   .pose-grid,
+  .warmup-layout,
+  .warmup-grid,
   .builder-layout,
+  .template-grid,
   .chapter-page-layout {
     grid-template-columns: 1fr;
   }
@@ -686,6 +797,10 @@ h2 {
   }
 
   .guide-panel {
+    position: static;
+  }
+
+  .selected-panel {
     position: static;
   }
 }

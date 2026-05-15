@@ -151,31 +151,290 @@ const sections = [
   },
 ];
 
-const poses = [
-  { name: "Low Lunge Wave", sanskrit: "Anjaneyasana variation", section: "Mobility", area: "Hips", level: "Base", cue: "Pulse between hip extension and hamstring length." },
-  { name: "Lizard Switch", sanskrit: "Utthan Pristhasana variation", section: "Mobility", area: "Hips", level: "Base", cue: "Shift between inner hip space and active front-leg control." },
-  { name: "Loaded Half Split", sanskrit: "Ardha Hanumanasana variation", section: "Mobility", area: "Hamstrings", level: "Base", cue: "Pull the front heel back lightly to create active length." },
-  { name: "Primal Squat Reach", sanskrit: "Malasana variation", section: "Mobility", area: "Ankles", level: "Base", cue: "Use breath and reaching patterns to open ankles, hips, and thoracic spine." },
-  { name: "Wave Plank", sanskrit: "Phalakasana variation", section: "Mobility", area: "Shoulders", level: "Intermediate", cue: "Glide shoulders, ribs, and hips as one connected line." },
-  { name: "Cossack Fold", sanskrit: "Skandasana variation", section: "Mobility", area: "Adductors", level: "Intermediate", cue: "Keep the bent knee tracking and the straight leg active." },
-  { name: "Wrist Load Prep", sanskrit: "Hasta mobility", section: "Handstand", area: "Wrists", level: "Base", cue: "Press through knuckles and fingertips before full bodyweight loading." },
-  { name: "Scapular Plank", sanskrit: "Phalakasana shoulder drill", section: "Handstand", area: "Shoulders", level: "Base", cue: "Move the shoulder blades without bending the elbows." },
-  { name: "Wall Plank Line", sanskrit: "Adho Mukha Vrksasana prep", section: "Handstand", area: "Line", level: "Base", cue: "Stack wrists, shoulders, ribs, pelvis, and heels." },
-  { name: "Chest-to-Wall Hold", sanskrit: "Adho Mukha Vrksasana wall", section: "Handstand", area: "Balance", level: "Intermediate", cue: "Push tall through the floor and keep ribs contained." },
-  { name: "Toe Pulls", sanskrit: "Handstand balance drill", section: "Handstand", area: "Balance", level: "Intermediate", cue: "Use tiny toe lifts to learn the freestanding line." },
-  { name: "Tuck Entry Drill", sanskrit: "Handstand entry", section: "Handstand", area: "Entries", level: "Advanced", cue: "Compact the shape before extending into the line." },
-  { name: "Half Split Hold", sanskrit: "Ardha Hanumanasana", section: "Flexibility", area: "Hamstrings", level: "Base", cue: "Use blocks and keep the front leg active." },
-  { name: "Supported Pigeon", sanskrit: "Kapotasana prep", section: "Flexibility", area: "Outer hips", level: "Base", cue: "Support the hip so the knee stays quiet." },
-  { name: "Frog Range", sanskrit: "Mandukasana variation", section: "Flexibility", area: "Adductors", level: "Intermediate", cue: "Move slowly in and out before holding." },
-  { name: "Wall Shoulder Flexion", sanskrit: "Overhead range drill", section: "Flexibility", area: "Shoulders", level: "Base", cue: "Keep ribs down while arms move overhead." },
-  { name: "Pancake Lean", sanskrit: "Upavistha Konasana prep", section: "Flexibility", area: "Adductors", level: "Intermediate", cue: "Hinge from the hips and keep the spine long." },
-  { name: "Front Split Blocks", sanskrit: "Hanumanasana prep", section: "Flexibility", area: "Hip flexors", level: "Advanced", cue: "Use height so the pelvis can stay square." },
+const movementFamilies = [
+  {
+    section: "Elasticity",
+    area: "Fascia warm-up",
+    level: "Base",
+    items: [
+      ["Down Dog Shoulder Bounce", "Pulse through the shoulders with soft elbows and long ribs."],
+      ["Low Lunge Hip Bounce", "Use small elastic pulses to warm the front hip and back leg."],
+      ["Low Lunge to Pyramid Oscillation", "Move between bent-knee hip opening and active hamstring length."],
+      ["Low Lunge to Standing Split Wave", "Shift from grounded hip extension into a light single-leg hinge."],
+      ["Runner Switch Bounce", "Alternate front-leg bend and hamstring reach without forcing depth."],
+      ["Tabletop Wrist Rock", "Rock forward and back through the palm to prepare hand loading."],
+      ["Bear Hover Pulse", "Hover knees low and pulse the spine long."],
+      ["Squat to Forward Fold Spring", "Move between deep hip flexion and hamstring length with bent knees."],
+      ["Lizard Elbow Hover Pulse", "Use small dips to open inner hip without collapsing."],
+      ["Cossack Side-to-Side Spring", "Shift laterally to warm adductors and ankles."],
+      ["Wave Plank Shoulder Glide", "Glide shoulders forward and back while keeping ribs organized."],
+      ["Puppy Pose Rib Pulse", "Pulse the chest toward the floor while keeping the neck easy."],
+      ["Prone Swimmer Sweep", "Sweep arms overhead and behind to warm shoulder range."],
+      ["Scapular Down Dog Shrug", "Elevate and depress the shoulders in an inverted line."],
+      ["Half Split Heel Drag", "Drag the front heel lightly back to wake up hamstrings."],
+      ["Standing Split Toe Tap", "Tap the lifted foot down and rebound into a hinge."],
+      ["Frog Rock", "Rock hips back and forward with knees supported."],
+      ["Bridge Bounce", "Pulse hips up lightly to warm posterior chain and hip extension."],
+      ["Supine Leg Switch", "Alternate hamstring reach and hip flexor length with easy rhythm."],
+      ["Wall Wrist Spring", "Pulse palms into the wall before floor loading."],
+    ],
+  },
+  {
+    section: "Mobility",
+    area: "Primary-inspired vinyasa",
+    level: "Base",
+    items: [
+      ["Forward Fold Toe Grip", "Fold with soft knees and active foot pressure."],
+      ["Forward Fold Hand Slide", "Use hands under feet or shins to traction the back line."],
+      ["Chair Power Fold", "Sit hips back, reach arms, then fold through the spine."],
+      ["Warrior One Hip Drive", "Open front hip and back ankle while reaching overhead."],
+      ["Warrior Two Lateral Reach", "Build lateral hip strength and side-body reach."],
+      ["Extended Side Angle Spiral", "Rotate ribs while grounding through both feet."],
+      ["Triangle Long-Line Reach", "Create length from back heel through top hand."],
+      ["Revolved Triangle Line", "Use blocks to rotate without collapsing the spine."],
+      ["Wide Fold Center Line", "Hinge wide and distribute weight through the feet."],
+      ["Wide Fold Side Walk", "Walk hands side to side for adductor and back-line range."],
+      ["Side Lunge Floor Switch", "Shift between side lunge and center fold."],
+      ["Balance Toe Hold Prep", "Stand tall and extend one leg with a bent-knee option."],
+      ["Side Balance Leg Open", "Open the lifted leg while keeping the pelvis organized."],
+      ["Half-Lotus Hinge Prep", "Use tree-like hip opening before folding."],
+      ["Staff Seat Upright", "Sit tall and organize ribs over pelvis."],
+      ["Seated Forward Fold Active", "Pull heels back gently and lengthen the back line."],
+      ["Reverse Plank Line", "Press hips up and open the front body."],
+      ["Half-Bound Seated Fold", "Combine hip rotation with hamstring length."],
+      ["One-Leg Fold Three Angles", "Fold over center, inside, and outside lines."],
+      ["Marichi Twist Prep", "Build spinal rotation with one knee bent."],
+      ["Boat Hold Pulses", "Build compression and hip flexor strength."],
+      ["Cross-Body Arm Balance Prep", "Load the hands and squeeze inner thighs."],
+      ["Turtle Fold Prep", "Thread shoulders under legs without forcing the neck."],
+      ["Wide Seated Compression", "Use hands beside thighs and lift heels."],
+      ["Bridge to Wheel Prep", "Progress from bridge into deeper front-body opening."],
+      ["Shoulder Stand Prep", "Use supported inversion shapes with careful neck space."],
+      ["Plow Prep Fold", "Fold hips overhead with support and control."],
+      ["Fish Chest Opener", "Open the front ribs after inversion work."],
+      ["Lotus Seat Prep", "Prepare hips without forcing knees."],
+      ["Rest Shape", "Finish with quiet breath and full-body release."],
+    ],
+  },
+  {
+    section: "Mobility",
+    area: "Power-vinyasa inspired",
+    level: "Intermediate",
+    items: [
+      ["Child to Down Dog Wave", "Move from grounded breath to shoulder-loaded length."],
+      ["Ragdoll Spine Pour", "Release the back line with bent knees."],
+      ["Locust Back-Line Lift", "Strengthen posterior chain and shoulder extension."],
+      ["Floor Bow Rock", "Open quads and chest with controlled rocking."],
+      ["Up Dog Chest Wave", "Open the front body without dumping into the low back."],
+      ["Camel Prep Lift", "Open hip flexors and chest with glute support."],
+      ["Dead Bug Core Map", "Coordinate ribs, pelvis, and breath."],
+      ["Flip Dog Spiral", "Rotate through shoulder, ribs, and hip."],
+      ["Side Plank Line", "Build lateral strength and shoulder stability."],
+      ["Scissor Leg Core", "Build hip flexor endurance without back strain."],
+      ["Half Pigeon Active", "Support outer hip range with active foot and props."],
+      ["Double Pigeon Stack", "Use support under the knees for hip rotation."],
+      ["Crescent Lunge Reach", "Load hip flexor length with overhead reach."],
+      ["Revolved Crescent Coil", "Rotate against the front leg for spinal control."],
+      ["Thunderbolt Twist", "Use kneeling rotation to open quads and thoracic spine."],
+      ["Crow Load Prep", "Shift weight into hands before lifting feet."],
+      ["Seated Single-Leg Extension", "Build hamstring length and hip flexor control."],
+      ["Tabletop Front-Body Lift", "Open shoulders and hips with bent knees."],
+      ["Eagle Wrap Balance", "Train compression, balance, and upper-back width."],
+      ["Airplane Hinge", "Build single-leg posterior-chain control."],
+      ["Half Moon Wall Line", "Use a wall or block to refine lateral balance."],
+      ["Dancer Bow Line", "Open quads and shoulders in a standing balance."],
+      ["Tree Hip Stack", "Train standing hip stability and breath."],
+      ["Supine Twist Reset", "Use rotation to downshift after strong work."],
+      ["Bound-Angle Rest", "Use support under knees for passive hip opening."],
+    ],
+  },
+  {
+    section: "Mobility",
+    area: "Hot yoga inspired",
+    level: "Base",
+    items: [
+      ["Half-Moon Side Bend", "Create long side-body lines before deeper work."],
+      ["Awkward Chair Strength", "Build quad and ankle heat with upright posture."],
+      ["Eagle Shoulder Wrap", "Mobilize upper back and train standing balance."],
+      ["Standing Head-to-Knee Prep", "Train single-leg balance and hamstring compression."],
+      ["Standing Bow Prep", "Open the front line while balancing."],
+      ["Balancing Stick Line", "Reach crown and heel in opposite directions."],
+      ["Standing Separate-Leg Fold", "Open hamstrings with a wide base."],
+      ["Triangle Strength Hold", "Hold a strong lateral lunge and rotate ribs."],
+      ["Tree to Toe Stand Prep", "Prepare hip rotation and ankle balance gradually."],
+      ["Fixed Firm Prep", "Open quads and ankles with props as needed."],
+      ["Half Tortoise Reach", "Lengthen shoulders and spine from a kneeling base."],
+      ["Camel Breath Lift", "Use breath and glutes to support back opening."],
+      ["Rabbit Spine Round", "Round the spine and stretch the back body."],
+      ["Head-to-Knee Seated Fold", "Fold with one knee bent and one leg extended."],
+      ["Spine Twist Tall Seat", "Rotate while keeping both sitting bones grounded."],
+    ],
+  },
+  {
+    section: "Handstand",
+    area: "Handstand development",
+    level: "Progressive",
+    items: [
+      ["Palm Line Mapping", "Map knuckle, fingertip, and heel-of-hand pressure."],
+      ["Finger Brake Drill", "Learn how fingertips control overbalance."],
+      ["Wrist Extension Load", "Build tolerance gradually in straight-arm support."],
+      ["Scapular Push-Up", "Move shoulder blades without bending elbows."],
+      ["Down Dog Shoulder Shrug", "Train elevation in an inverted shape."],
+      ["Wall Hollow Body", "Stack ribs and pelvis before going upside down."],
+      ["Wall Plank Line", "Use feet on wall to organize shoulder, rib, and hip stack."],
+      ["Chest-to-Wall Hold", "Build a clean line with wall feedback."],
+      ["Toe Pull Balance", "Peel one foot from the wall to locate balance."],
+      ["Heel Pull Balance", "Use light heel taps to learn correction."],
+      ["Tuck Handstand Shape", "Compress knees toward chest without losing push."],
+      ["Straddle Line Drill", "Open legs wide while keeping the pelvis stacked."],
+      ["Split Line Drill", "Use split legs to understand counterbalance."],
+      ["Kick-Up Accuracy", "Practice consistent entries without overshooting."],
+      ["Tuck Entry Accuracy", "Enter compact before extending."],
+      ["Press Compression Prep", "Strengthen hip flexion and shoulder lean."],
+      ["Wall Press Negative", "Lower slowly from wall support."],
+      ["Freestanding Exit Map", "Practice step-down and cartwheel exits."],
+      ["Handstand Shoulder Tap Prep", "Shift weight without twisting the ribs."],
+      ["Block Line Squeeze", "Hold a block between thighs to organize midline."],
+      ["Crow to Handstand Prep", "Connect arm balance compression to inversion strength."],
+      ["Forearm Balance Line", "Use forearms to train shoulder opening and rib control."],
+      ["One-Arm Weight Shift", "Shift toward one hand without collapsing shoulder height."],
+      ["Wall One-Arm Lean", "Use the wall to explore single-arm loading safely."],
+      ["Handstand Snap-Down", "Exit into a controlled forward fold or lunge."],
+    ],
+  },
+  {
+    section: "Arm Balance",
+    area: "Arm balances and freezes",
+    level: "Progressive",
+    items: [
+      ["Crow Weight Shift", "Learn hand pressure and knee-to-arm contact."],
+      ["Side Crow Coil", "Rotate and load the hands without rushing lift-off."],
+      ["Flying Pigeon Prep", "Combine figure-four hip shape with hand balance."],
+      ["Eight-Angle Prep", "Hook legs around the arm and extend with control."],
+      ["Grasshopper Prep", "Combine twist, hip rotation, and hand loading."],
+      ["Firefly Prep", "Use hamstring length and straight-arm support."],
+      ["Shoulder-Press Prep", "Squeeze inner thighs around upper arms."],
+      ["Peacock Lean Prep", "Explore forearm-to-belly contact gradually."],
+      ["Baby Freeze Base", "Use head and hands as a tripod-like low balance."],
+      ["Air Baby Prep", "Load one arm with knee-to-elbow support."],
+      ["Reverse Air Baby Prep", "Explore the opposite-side freeze line with support."],
+      ["One-Arm Crow Lean", "Shift toward single-arm support while keeping feet light."],
+      ["Elbow Lever Line", "Balance body tension across the elbows."],
+      ["QDR Freeze Prep", "Load one bent arm and organize the side body."],
+      ["Side Plank Float", "Build lateral shoulder stability before freeze work."],
+    ],
+  },
+  {
+    section: "Flexibility",
+    area: "Range of motion",
+    level: "Progressive",
+    items: [
+      ["Half Split Active Hold", "Pull heel back and keep the spine long."],
+      ["Front Split Block Track", "Use blocks to keep pelvis organized."],
+      ["Low Lunge Quad Catch Prep", "Open hip flexor and quad without twisting the knee."],
+      ["Pigeon Supported Range", "Support the hip and keep sensation out of the knee."],
+      ["Figure-Four Fold", "Use a safer outer-hip option with adjustable depth."],
+      ["Frog Progressive Hold", "Build adductor tolerance with support."],
+      ["Pancake Hinge", "Fold from the hips with active legs."],
+      ["Middle Split Wall Prep", "Use the wall to manage adductor range."],
+      ["Couch Stretch Line", "Open quad and hip flexor with rib control."],
+      ["Supine Hamstring Strap", "Use a strap to build relaxed hamstring range."],
+      ["Shoulder Flexion Wall Slide", "Train overhead range without rib flare."],
+      ["Chest Opener Block Support", "Use props for passive chest and shoulder opening."],
+      ["Internal Rotation Hip Switch", "Train hip capsule control in seated switches."],
+      ["Ninety-Ninety Lift-Off", "Add active control to external and internal rotation."],
+      ["Jefferson Curl Prep", "Segment the spine slowly with light load or no load."],
+      ["Bridge Shoulder Opener", "Open front body while keeping glutes active."],
+      ["Wheel Prep Blocks", "Use elevated hands to make back opening accessible."],
+      ["Seated Twist Range", "Rotate with height before pulling deeper."],
+      ["Ankle Dorsiflexion Pulse", "Build squat-friendly ankle range."],
+      ["Calf Wall Length", "Open the lower leg with knee straight and bent versions."],
+    ],
+  },
+];
+
+const variationMethods = [
+  ["Base hold", "Hold the shape and breathe steadily."],
+  ["Elastic pulses", "Use small rhythmic pulses without forcing end range."],
+  ["Slow eccentric", "Move into the shape slowly and resist the return."],
+  ["Isometric press", "Press into the floor, wall, or prop for 5 breaths."],
+  ["Active lift-off", "Lift away from the support using the target muscles."],
+  ["Transition link", "Connect the movement to the next pose in a smooth flow."],
+  ["Prop-supported", "Use blocks, wall, strap, or blanket to make the range precise."],
+  ["End-range breath", "Stay near the edge and use slow exhales to reduce guarding."],
+];
+
+function slugify(value) {
+  return value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+}
+
+function buildPoseLibrary() {
+  const generated = [];
+
+  movementFamilies.forEach((family) => {
+    family.items.forEach(([name, cue], itemIndex) => {
+      variationMethods.forEach(([method, methodCue], methodIndex) => {
+        if (generated.length >= 240) return;
+        const poseName = methodIndex === 0 ? name : `${name} - ${method}`;
+        generated.push({
+          name: poseName,
+          originalBase: name,
+          section: family.section,
+          area: family.area,
+          level: methodIndex > 4 ? "Advanced" : family.level,
+          cue: `${cue} ${methodCue}`,
+          image: `assets/avatars/${slugify(poseName)}.png`,
+        });
+      });
+    });
+  });
+
+  return generated;
+}
+
+const poses = buildPoseLibrary();
+
+const warmupOptions = poses
+  .filter((pose) => pose.section === "Elasticity")
+  .slice(0, 24);
+
+const flowTemplates = [
+  {
+    title: "Wrist Warm-Up Flow",
+    focus: "Before handstands or arm balances",
+    items: ["Wall Wrist Spring", "Tabletop Wrist Rock", "Palm Line Mapping", "Scapular Plank", "Down Dog Shoulder Bounce"],
+  },
+  {
+    title: "Back Opening Flow",
+    focus: "Front-body opening with shoulder control",
+    items: ["Locust Back-Line Lift", "Floor Bow Rock", "Camel Breath Lift", "Bridge Shoulder Opener", "Wheel Prep Blocks"],
+  },
+  {
+    title: "Splits Prep Flow",
+    focus: "Hip flexors, hamstrings, and active range",
+    items: ["Low Lunge Hip Bounce", "Low Lunge to Pyramid Oscillation", "Half Split Active Hold", "Front Split Block Track", "Standing Split Toe Tap"],
+  },
+  {
+    title: "Handstand Line Prep",
+    focus: "Wrists, shoulders, hollow line, balance",
+    items: ["Wrist Extension Load", "Down Dog Shoulder Shrug", "Wall Plank Line", "Chest-to-Wall Hold", "Toe Pull Balance"],
+  },
+  {
+    title: "Elastic Mobility Starter",
+    focus: "Low-impact fascia warm-up",
+    items: ["Down Dog Shoulder Bounce", "Low Lunge Hip Bounce", "Runner Switch Bounce", "Cossack Side-to-Side Spring", "Frog Rock"],
+  },
 ];
 
 const sectionListEl = document.querySelector("#section-list");
 const poseGridEl = document.querySelector("#pose-grid");
 const builderFlowEl = document.querySelector("#builder-flow");
+const warmupGridEl = document.querySelector("#warmup-grid");
+const selectedWarmupsEl = document.querySelector("#selected-warmups");
+const warmupCountEl = document.querySelector("#warmup-count");
+const templateGridEl = document.querySelector("#template-grid");
 const filterButtons = document.querySelectorAll(".filter-button");
+const selectedWarmups = new Set();
 
 const metaEl = document.querySelector("#chapter-meta");
 const titleEl = document.querySelector("#chapter-title");
@@ -216,18 +475,31 @@ function renderPoses(filter = "All") {
       (pose) => `
         <article class="pose-card-item">
           <div class="pose-avatar" aria-hidden="true">
-            <span>${pose.name.split(" ").map((word) => word[0]).join("").slice(0, 3)}</span>
+            ${
+              pose.image
+                ? `<img src="${pose.image}" alt="" onerror="this.hidden = true; this.nextElementSibling.hidden = false;" /><span hidden>${initials(pose.name)}</span>`
+                : `<span>${initials(pose.name)}</span>`
+            }
           </div>
           <div>
             <p>${pose.section} / ${pose.area} / ${pose.level}</p>
             <h3>${pose.name}</h3>
-            <span>${pose.sanskrit}</span>
+            <span>${pose.originalBase || "Movement variation"}</span>
             <small>${pose.cue}</small>
           </div>
         </article>
       `,
     )
     .join("");
+}
+
+function initials(name) {
+  return name
+    .split(" ")
+    .filter((word) => word !== "-" && word.length)
+    .map((word) => word[0])
+    .join("")
+    .slice(0, 3);
 }
 
 function renderBuilderFlow() {
@@ -242,6 +514,68 @@ function renderBuilderFlow() {
   ];
 
   builderFlowEl.innerHTML = defaultFlow.map((item) => `<li>${item}</li>`).join("");
+}
+
+function renderWarmups() {
+  if (!warmupGridEl) return;
+
+  warmupGridEl.innerHTML = warmupOptions
+    .map(
+      (pose, index) => `
+        <label class="warmup-card">
+          <input type="checkbox" value="${index}" ${selectedWarmups.has(index) ? "checked" : ""} />
+          <span>${pose.area}</span>
+          <strong>${pose.originalBase}</strong>
+          <small>${pose.cue}</small>
+        </label>
+      `,
+    )
+    .join("");
+
+  warmupGridEl.querySelectorAll("input").forEach((input) => {
+    input.addEventListener("change", () => {
+      const index = Number(input.value);
+      if (input.checked) {
+        if (selectedWarmups.size >= 7) {
+          input.checked = false;
+          return;
+        }
+        selectedWarmups.add(index);
+      } else {
+        selectedWarmups.delete(index);
+      }
+      renderSelectedWarmups();
+      renderWarmups();
+    });
+  });
+}
+
+function renderSelectedWarmups() {
+  if (!selectedWarmupsEl || !warmupCountEl) return;
+
+  const selected = [...selectedWarmups].map((index) => warmupOptions[index]);
+  warmupCountEl.textContent = `${selected.length} selected`;
+  selectedWarmupsEl.innerHTML = selected.length
+    ? selected.map((pose) => `<li>${pose.originalBase}</li>`).join("")
+    : "<li>Select 5-7 movements for a complete elastic warm-up.</li>";
+}
+
+function renderTemplates() {
+  if (!templateGridEl) return;
+
+  templateGridEl.innerHTML = flowTemplates
+    .map(
+      (template) => `
+        <article class="template-card">
+          <p>${template.focus}</p>
+          <h3>${template.title}</h3>
+          <ol>
+            ${template.items.map((item) => `<li>${item}</li>`).join("")}
+          </ol>
+        </article>
+      `,
+    )
+    .join("");
 }
 
 function getSectionIndex() {
@@ -332,4 +666,7 @@ window.addEventListener("beforeprint", () => {
 renderSections();
 renderPoses();
 renderBuilderFlow();
+renderWarmups();
+renderSelectedWarmups();
+renderTemplates();
 renderSectionPage(getSectionIndex());
