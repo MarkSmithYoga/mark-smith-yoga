@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mark Smith Yoga</title>
+    <meta
+      name="description"
+      content="A modern yoga sequencing and pose library focused on mobility, flexibility, and handstand development."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Mark Smith Yoga home">
+        <span class="brand-mark">MS</span>
+        <span>Mark Smith Yoga</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#pose-library">Pose Library</a>
+        <a href="#sequence-builder">Builder</a>
+        <a href="#printable-flows">Printable Flows</a>
+        <a href="#sections">Sections</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero planner-hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <p class="eyebrow">Modern sequencing studio</p>
+          <h1 id="hero-title">Build flexible bodies and stronger handstands.</h1>
+          <p class="hero-copy">
+            A modern pose-selection and sequence-planning space for avatar PDFs, printable
+            flows, flexibility education, and handstand-specific progression work.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#pose-library">Start building</a>
+            <a class="button secondary" href="#printable-flows">Use a ready flow</a>
+          </div>
+        </div>
+        <div class="builder-preview" aria-label="Sequence preview">
+          <div class="preview-header">
+            <span>Today&apos;s build</span>
+            <strong>Handstand line prep</strong>
+          </div>
+          <div class="mini-flow">
+            <span>Wrist prep</span>
+            <span>Scapular plank</span>
+            <span>Wall line</span>
+            <span>Tuck entry</span>
+            <span>Exit drill</span>
+          </div>
+          <div class="preview-footer">
+            <span>Avatar PDF ready</span>
+            <span>5 poses</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats-band" aria-label="Program highlights">
+        <div>
+          <strong>01</strong>
+          <span>choose a filter</span>
+        </div>
+        <div>
+          <strong>02</strong>
+          <span>add movements</span>
+        </div>
+        <div>
+          <strong>03</strong>
+          <span>print the flow</span>
+        </div>
+      </section>
+
+      <section class="section intro" aria-labelledby="about-title">
+        <div>
+          <p class="eyebrow">Offline-first practice</p>
+          <h2 id="about-title">A visual practice-planning system for flows, avatars, and print.</h2>
+        </div>
+        <p>
+          Each section is built around pose selection, movement notes, sequencing logic,
+          printable practice sheets, and future avatar PDFs that can hold complete flows and
+          handstand programs.
+        </p>
+      </section>
+
+      <section class="section" id="sections" aria-labelledby="sections-title">
+        <div class="section-heading">
+          <p class="eyebrow">Core sections</p>
+          <h2 id="sections-title">Choose your training lane</h2>
+        </div>
+        <div class="section-grid" id="section-list"></div>
+      </section>
+
+      <section class="section library-section" id="pose-library" aria-labelledby="library-title">
+        <div class="section-heading">
+          <p class="eyebrow">Step 1 / Pose selection</p>
+          <h2 id="library-title">Pick a category, then add movements to your flow.</h2>
+          <p>
+            Start with one focused group. You can search by name, body area, handstand,
+            wrist, splits, backbend, or arm balance.
+          </p>
+        </div>
+
+        <div class="library-tools">
+          <label class="search-field" for="pose-search">
+            <span>Search poses</span>
+            <input id="pose-search" type="search" placeholder="Try wrist, handstand, splits, crow..." />
+          </label>
+        </div>
+
+        <div class="filter-bar" aria-label="Pose filters">
+          <button class="filter-button is-active" type="button" data-filter="Starter">Starter</button>
+          <button class="filter-button" type="button" data-filter="Wrist Prep">Wrist</button>
+          <button class="filter-button" type="button" data-filter="Handstand Line">Handstand line</button>
+          <button class="filter-button" type="button" data-filter="Handstand Entries">Entries</button>
+          <button class="filter-button" type="button" data-filter="Press + Compression">Press + core</button>
+          <button class="filter-button" type="button" data-filter="Arm Balance">Arm balance</button>
+          <button class="filter-button" type="button" data-filter="Hip Mobility">Hips</button>
+          <button class="filter-button" type="button" data-filter="Splits + Hamstrings">Splits</button>
+          <button class="filter-button" type="button" data-filter="Backbends">Backbends</button>
+          <button class="filter-button" type="button" data-filter="All">All</button>
+        </div>
+
+        <div class="pose-grid" id="pose-grid"></div>
+      </section>
+
+      <section class="section builder-section" id="sequence-builder" aria-labelledby="builder-title">
+        <div class="section-heading">
+          <p class="eyebrow">Step 2 / Build your custom flow</p>
+          <h2 id="builder-title">Arrange the movements, then print a clean practice sheet.</h2>
+          <p>
+            Add poses from the library, move them up or down, remove what you do not want,
+            or load a complete ready-made flow below.
+          </p>
+        </div>
+        <div class="builder-layout">
+          <div class="builder-column">
+            <div class="builder-heading">
+              <div>
+                <h3>Your custom flow</h3>
+                <span id="builder-count">0 movements selected</span>
+              </div>
+              <button class="text-button" id="clear-builder-flow" type="button">Clear</button>
+            </div>
+            <ol id="builder-flow"></ol>
+            <button class="button primary builder-print-button" id="print-builder-flow" type="button">Print custom flow</button>
+          </div>
+          <div class="builder-column dark">
+            <h3>Simple workflow</h3>
+            <ul>
+              <li>Pick one category above.</li>
+              <li>Add 5-12 movements.</li>
+              <li>Use move buttons to organize the order.</li>
+              <li>Print the custom flow as an offline PDF.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="print-sheet" id="print-sheet" aria-label="Printable custom flow">
+        <div class="print-sheet-header">
+          <p>Mark Smith Yoga</p>
+          <h2 id="print-sheet-title">Custom Practice Flow</h2>
+          <span id="print-sheet-meta">Build, breathe, practice.</span>
+        </div>
+        <ol id="print-sheet-sequence"></ol>
+        <div class="print-sheet-notes">
+          <strong>Practice notes</strong>
+          <p>Move with clean breath, stop before form breaks, and keep each position repeatable.</p>
+        </div>
+      </section>
+
+      <section class="section warmup-section" id="elastic-warmups" aria-labelledby="warmup-title">
+        <div class="section-heading">
+          <p class="eyebrow">Elasticity warm-up lab</p>
+          <h2 id="warmup-title">Pick 5-7 low-impact movements before handstand work.</h2>
+          <p>
+            These options use gentle oscillation, reciprocal loading, and viscoelastic tissue
+            prep so the shoulders, wrists, spine, hips, and hamstrings feel springy without
+            being overworked.
+          </p>
+        </div>
+        <div class="warmup-layout">
+          <div class="warmup-grid" id="warmup-grid"></div>
+          <aside class="selected-panel">
+            <p class="eyebrow">Selected warm-up</p>
+            <h3 id="warmup-count">0 selected</h3>
+            <ol id="selected-warmups"></ol>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section printable-flow-section" id="printable-flows" aria-labelledby="printable-flows-title">
+        <div class="section-heading">
+          <p class="eyebrow">Printable flow library</p>
+          <h2 id="printable-flows-title">Ready-made printable PDF flows.</h2>
+          <p>
+            These printable flows use original movement language, modern mobility cues, and
+            avatar-ready pose slots. Add a whole flow to the builder with one click, then edit
+            or print it.
+          </p>
+        </div>
+        <div class="flow-program-grid" id="flow-program-grid"></div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <span>Mark Smith Yoga</span>
+      <span>Modern pose library, sequence builder, and printable practice system.</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
