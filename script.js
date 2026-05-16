@@ -368,6 +368,90 @@ function slugify(value) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 }
 
+const customAvatarSlugs = new Set([
+  "compression-pike-lifts",
+  "freestanding-endurance-holds",
+  "handstand-wall-walks",
+  "pike-handstand-entry",
+  "straddle-entry",
+  "toes-and-nose-handstand",
+  "tuck-entry",
+  "wall-supported-one-arm-shifts",
+]);
+
+const avatarAliases = {
+  "forearm-soft-tissue-glide": "forearm-pronation-supination",
+  "wrist-cooldown-fold": "prayer-wrist-pulse",
+};
+
+const avatarBackupPool = [
+  "assets/avatars/air-baby-prep.png",
+  "assets/avatars/airplane-hinge.png",
+  "assets/avatars/baby-crow-prep.png",
+  "assets/avatars/bear-hover-pulse.png",
+  "assets/avatars/boat-hold-pulses.png",
+  "assets/avatars/bridge-bounce.png",
+  "assets/avatars/camel-breath-lift.png",
+  "assets/avatars/chair-power-fold.png",
+  "assets/avatars/chest-to-wall-hold.png",
+  "assets/avatars/crow-load-prep.png",
+  "assets/avatars/down-dog-shoulder-bounce.png",
+  "assets/avatars/eagle-wrap-balance.png",
+  "assets/avatars/eight-angle-prep.png",
+  "assets/avatars/firefly-prep.png",
+  "assets/avatars/flying-pigeon-prep.png",
+  "assets/avatars/forearm-balance-line.png",
+  "assets/avatars/frog-rock.png",
+  "assets/avatars/half-pigeon-active.png",
+  "assets/avatars/handstand-snap-down.png",
+  "assets/avatars/l-sit-block-hold.png",
+  "assets/avatars/low-lunge-hip-bounce.png",
+  "assets/avatars/pancake-hinge.png",
+  "assets/avatars/planche-lean-line.png",
+  "assets/avatars/press-compression-prep.png",
+  "assets/avatars/scapular-push-up.png",
+  "assets/avatars/side-crow-coil.png",
+  "assets/avatars/side-plank-line.png",
+  "assets/avatars/standing-split-toe-tap.png",
+  "assets/avatars/straddle-compression-pulses.png",
+  "assets/avatars/tabletop-wrist-rock.png",
+  "assets/avatars/toe-pull-balance.png",
+  "assets/avatars/tripod-pike-balance.png",
+  "assets/avatars/wall-hollow-body.png",
+  "assets/avatars/wall-plank-line.png",
+  "assets/avatars/wall-wrist-spring.png",
+  "assets/avatars/wheel-prep-blocks.png",
+  "assets/avatars/wide-seated-compression.png",
+  "assets/avatars/wrist-cars.png",
+  "assets/avatars-custom/handstand-wall-walks.png",
+  "assets/avatars-custom/toes-and-nose-handstand.png",
+];
+
+function getAvatarPath(name, baseName = name) {
+  const nameSlug = slugify(name);
+  const baseSlug = slugify(baseName || name);
+  if (customAvatarSlugs.has(nameSlug)) return `assets/avatars-custom/${nameSlug}.png`;
+  return `assets/avatars/${avatarAliases[baseSlug] || baseSlug}.png`;
+}
+
+function getBackupAvatarPath(key) {
+  const text = slugify(key || "movement");
+  const hash = [...text].reduce((total, char) => total + char.charCodeAt(0), 0);
+  return avatarBackupPool[hash % avatarBackupPool.length];
+}
+
+function showAvatarFallback(image) {
+  if (!image.dataset.fallbackTried) {
+    image.dataset.fallbackTried = "true";
+    image.src = getBackupAvatarPath(image.dataset.fallbackKey || image.alt || "");
+    return;
+  }
+
+  image.hidden = true;
+  image.parentElement?.classList.add("is-fallback");
+  if (image.nextElementSibling) image.nextElementSibling.hidden = false;
+}
+
 function buildPoseLibrary() {
   const generated = [];
 
@@ -383,7 +467,7 @@ function buildPoseLibrary() {
           area: family.area,
           level: methodIndex > 4 ? "Advanced" : family.level,
           cue: `${cue} ${methodCue}`,
-          image: `assets/avatars/${slugify(poseName)}.png`,
+          image: getAvatarPath(poseName, name),
         });
       });
     });
@@ -603,7 +687,7 @@ function renderPoses(filter = "All") {
           <div class="pose-avatar" aria-hidden="true">
             ${
               pose.image
-                ? `<img src="${pose.image}" alt="" onerror="this.hidden = true; this.nextElementSibling.hidden = false;" /><span hidden>${initials(pose.name)}</span>`
+                ? `<img src="${pose.image}" alt="" data-fallback-key="${pose.name}" onerror="showAvatarFallback(this)" /><span hidden>${initials(pose.name)}</span>`
                 : `<span>${initials(pose.name)}</span>`
             }
           </div>
@@ -747,7 +831,7 @@ function renderPrintableFlows() {
                 (item) => `
                   <li>
                     <span class="flow-avatar-slot">
-                      <img src="assets/avatars/${slugify(item)}.png" alt="" onerror="this.hidden = true; this.nextElementSibling.hidden = false;" />
+                      <img src="${getAvatarPath(item)}" alt="" data-fallback-key="${item}" onerror="showAvatarFallback(this)" />
                       <em hidden>${initials(item)}</em>
                     </span>
                     <strong>${item}</strong>
@@ -782,7 +866,7 @@ function renderPrintableFlows() {
             area: program.title,
             level: "Sequence",
             cue: "Use the printable flow cueing for this movement.",
-            image: `assets/avatars/${slugify(name)}.png`,
+            image: getAvatarPath(name),
           },
         );
       });

@@ -398,6 +398,14 @@ h2 {
   font-weight: 800;
 }
 
+.pose-avatar.is-fallback,
+.flow-avatar-slot.is-fallback {
+  background:
+    linear-gradient(135deg, rgba(225, 38, 28, 0.3), rgba(255, 255, 255, 0.04)),
+    #101010;
+  border-color: rgba(225, 38, 28, 0.34);
+}
+
 .pose-avatar img {
   display: block;
   height: 88%;
@@ -711,6 +719,7 @@ h2 {
   color: var(--clay);
   font-style: normal;
   font-weight: 800;
+  letter-spacing: 0;
 }
 
 .flow-sequence-list strong {
