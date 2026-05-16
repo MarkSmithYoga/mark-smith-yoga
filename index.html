@@ -108,6 +108,7 @@
           <button class="filter-button is-active" type="button" data-filter="All">All</button>
           <button class="filter-button" type="button" data-filter="Elasticity">Elasticity</button>
           <button class="filter-button" type="button" data-filter="Wrist Prep">Wrist Prep</button>
+          <button class="filter-button" type="button" data-filter="Strength Prep">Strength Prep</button>
           <button class="filter-button" type="button" data-filter="Mobility">Mobility</button>
           <button class="filter-button" type="button" data-filter="Handstand">Handstand</button>
           <button class="filter-button" type="button" data-filter="Flexibility">Flexibility</button>
@@ -120,28 +121,28 @@
       <section class="section builder-section" id="sequence-builder" aria-labelledby="builder-title">
         <div class="section-heading">
           <p class="eyebrow">Build your custom flow</p>
-          <h2 id="builder-title">Add poses, reorder your thinking, and print the result.</h2>
+          <h2 id="builder-title">Add poses from the library or load a ready-made PDF flow.</h2>
           <p>
-            Use the pose cards above to add movements into your flow. Start with elasticity
-            work, add handstand skill drills, then finish with flexibility or recovery shapes.
+            Choose individual movements above, or use one of the printable flow cards below to
+            load an entire sequence into your builder with one click.
           </p>
         </div>
         <div class="builder-layout">
           <div class="builder-column">
             <h3>Your custom flow</h3>
             <ol id="builder-flow"></ol>
+            <button class="button primary builder-print-button" id="print-builder-flow" type="button">Print custom flow</button>
           </div>
           <div class="builder-column dark">
-            <h3>How to use it</h3>
+            <h3>Simple workflow</h3>
             <ul>
-              <li>Filter the pose library by the type of practice you want.</li>
-              <li>Click Add to flow on the movements you want.</li>
-              <li>Use 5-7 elasticity movements before handstand work.</li>
-              <li>Print the page or save it as a PDF when the flow is ready.</li>
+              <li>Filter the pose library.</li>
+              <li>Click Add to flow on poses you want.</li>
+              <li>Or load a full PDF flow below.</li>
+              <li>Print the page or save it as a PDF.</li>
             </ul>
           </div>
         </div>
-        <div class="template-grid" id="template-grid"></div>
       </section>
 
       <section class="section warmup-section" id="elastic-warmups" aria-labelledby="warmup-title">
@@ -167,11 +168,11 @@
       <section class="section printable-flow-section" id="printable-flows" aria-labelledby="printable-flows-title">
         <div class="section-heading">
           <p class="eyebrow">Printable flow library</p>
-          <h2 id="printable-flows-title">Primary-inspired and power-vinyasa flow packets.</h2>
+          <h2 id="printable-flows-title">Ready-made printable PDF flows.</h2>
           <p>
             These printable flows use original movement language, modern mobility cues, and
-            avatar-ready pose slots. Use them as structured PDF sections or as starting points
-            for build-it-yourself practice sheets.
+            avatar-ready pose slots. Add a whole flow to the builder with one click, then edit
+            or print it.
           </p>
         </div>
         <div class="flow-program-grid" id="flow-program-grid"></div>

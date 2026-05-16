@@ -337,13 +337,18 @@ h2 {
 }
 
 .filter-button {
-  background: transparent;
+  background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--line);
-  border-radius: 999px;
   color: var(--ink);
   cursor: pointer;
   font-weight: 800;
   padding: 10px 16px;
+  transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.filter-button:hover {
+  border-color: rgba(225, 38, 28, 0.58);
+  transform: translateY(-1px);
 }
 
 .filter-button.is-active {
@@ -353,6 +358,7 @@ h2 {
 }
 
 .pose-grid {
+  align-items: stretch;
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
@@ -361,10 +367,15 @@ h2 {
   border: 1px solid rgba(225, 38, 28, 0.16);
   display: grid;
   gap: 18px;
-  grid-template-columns: 90px minmax(0, 1fr);
-  min-height: 190px;
+  grid-template-columns: 112px minmax(0, 1fr);
+  min-height: 210px;
   padding: 18px;
-  transition: transform 180ms ease, border-color 180ms ease;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.pose-card-item:hover {
+  background: rgba(24, 24, 25, 0.98);
+  border-color: rgba(225, 38, 28, 0.46);
 }
 
 .pose-avatar {
@@ -373,9 +384,12 @@ h2 {
   background:
     linear-gradient(135deg, rgba(225, 38, 28, 0.92), rgba(255, 255, 255, 0.06)),
     var(--charcoal);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   color: var(--white);
   display: flex;
   justify-content: center;
+  overflow: hidden;
+  place-self: start stretch;
 }
 
 .pose-avatar span {
@@ -386,10 +400,11 @@ h2 {
 
 .pose-avatar img {
   display: block;
-  height: 100%;
+  height: 88%;
+  margin: auto;
   object-fit: contain;
-  padding: 8px;
-  width: 100%;
+  object-position: center center;
+  width: 88%;
 }
 
 .pose-card-item p {
@@ -413,6 +428,12 @@ h2 {
   line-height: 1.55;
 }
 
+.pose-card-item > div:last-child {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
 .add-pose-button,
 .remove-pose-button {
   background: rgba(225, 38, 28, 0.16);
@@ -420,19 +441,36 @@ h2 {
   color: var(--ink);
   cursor: pointer;
   font-weight: 800;
+  letter-spacing: 0;
   margin-top: 12px;
   padding: 9px 12px;
   text-align: center;
+  transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
 }
 
 .add-pose-button:hover,
 .remove-pose-button:hover {
   background: var(--clay);
+  border-color: var(--clay);
   color: var(--white);
+  transform: translateY(-1px);
+}
+
+.add-pose-button {
+  margin-top: auto;
+  width: 100%;
 }
 
 .builder-layout {
   grid-template-columns: 1fr 1fr;
+}
+
+.builder-section {
+  background:
+    linear-gradient(180deg, rgba(225, 38, 28, 0.08), transparent 38%),
+    #0b0b0c;
+  border-bottom: 1px solid rgba(225, 38, 28, 0.18);
+  border-top: 1px solid rgba(225, 38, 28, 0.18);
 }
 
 .warmup-section {
@@ -474,7 +512,7 @@ h2 {
 }
 
 .warmup-card span,
-.template-card p {
+.flow-program-header p {
   color: var(--clay);
   font-size: 0.72rem;
   font-weight: 800;
@@ -543,6 +581,7 @@ h2 {
 }
 
 #builder-flow li {
+  background: rgba(255, 255, 255, 0.025);
   border: 1px solid var(--line);
   padding: 14px;
 }
@@ -556,32 +595,6 @@ h2 {
 #builder-flow strong {
   display: block;
   margin: 4px 0;
-}
-
-.template-grid {
-  display: grid;
-  gap: 18px;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin-top: 18px;
-}
-
-.template-card {
-  background: #111112;
-  border: 1px solid var(--line);
-  padding: 24px;
-}
-
-.template-card h3 {
-  font-size: 1.1rem;
-}
-
-.template-card ol {
-  color: var(--muted);
-  display: grid;
-  gap: 8px;
-  line-height: 1.55;
-  margin: 16px 0 0;
-  padding-left: 18px;
 }
 
 .printable-flow-section {
@@ -661,6 +674,8 @@ h2 {
   border: 1px solid rgba(225, 38, 28, 0.18);
   display: grid;
   gap: 10px;
+  grid-template-rows: auto auto auto 1fr;
+  min-height: 214px;
   padding: 12px;
 }
 
@@ -679,15 +694,17 @@ h2 {
   border: 1px solid var(--line);
   display: flex;
   justify-content: center;
-  min-height: 92px;
+  min-height: 112px;
+  overflow: hidden;
 }
 
 .flow-avatar-slot img {
   display: block;
-  height: 100%;
+  height: 88%;
+  margin: auto;
   object-fit: contain;
-  padding: 6px;
-  width: 100%;
+  object-position: center center;
+  width: 88%;
 }
 
 .flow-avatar-slot em {
@@ -703,6 +720,21 @@ h2 {
 
 .print-flow-button {
   margin-top: 24px;
+}
+
+.add-flow-button {
+  margin-right: 10px;
+  margin-top: 24px;
+}
+
+.add-flow-button,
+.print-flow-button {
+  min-width: 168px;
+}
+
+.builder-print-button {
+  margin-top: 22px;
+  width: 100%;
 }
 
 .site-footer {
@@ -947,7 +979,6 @@ h2 {
   .warmup-layout,
   .warmup-grid,
   .builder-layout,
-  .template-grid,
   .flow-program-body,
   .chapter-page-layout {
     grid-template-columns: 1fr;
@@ -992,8 +1023,19 @@ h2 {
     grid-template-columns: 1fr;
   }
 
+  .pose-avatar {
+    max-width: 180px;
+    width: 100%;
+  }
+
   .flow-sequence-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .add-flow-button,
+  .print-flow-button {
+    margin-right: 0;
+    width: 100%;
   }
 
   .mini-flow span:nth-child(even) {
@@ -1116,5 +1158,45 @@ h2 {
 
   .flow-sequence-list li {
     background: #ffffff;
+    min-height: 0;
+  }
+
+  .flow-avatar-slot,
+  .pose-avatar {
+    background: #ffffff;
+    border-color: #cccccc;
+  }
+
+  body.print-builder .section:not(.builder-section) {
+    display: none !important;
+  }
+
+  body.print-builder .builder-section,
+  body.print-builder .builder-layout,
+  body.print-builder .builder-column {
+    background: #ffffff;
+    border: 0;
+    color: #111111;
+    display: block !important;
+    padding: 0;
+  }
+
+  body.print-builder .builder-column.dark,
+  body.print-builder .builder-print-button {
+    display: none !important;
+  }
+
+  body.print-builder #builder-flow {
+    display: grid;
+    gap: 8pt;
+    list-style: decimal;
+    padding-left: 18pt;
+  }
+
+  body.print-builder #builder-flow li {
+    background: #ffffff;
+    border: 1px solid #cccccc;
+    break-inside: avoid;
+    padding: 10pt;
   }
 }

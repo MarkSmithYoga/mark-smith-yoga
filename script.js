@@ -180,45 +180,6 @@ const movementFamilies = [
     ],
   },
   {
-    section: "Wrist Prep",
-    area: "Wrist capacity",
-    level: "Base",
-    items: [
-      ["Wrist CARs", "Draw slow controlled circles through the wrist without rushing the end range."],
-      ["Finger Tendon Waves", "Move from straight hand to hook fist to full fist to warm the finger tendons."],
-      ["Palm Heel Lift-Offs", "Keep fingers grounded and lift the heel of the palm to wake wrist flexion control."],
-      ["Finger Pad Presses", "Press each finger pad down to connect the fingers to the palm line."],
-      ["Knuckle Push-Up Prep", "Use a gentle fist position to prepare the wrist without deep extension."],
-      ["Back-of-Hand Rock", "Place the back of the hand lightly down and rock only within a pain-free range."],
-      ["Prayer Wrist Pulse", "Press palms together and pulse the hands downward while shoulders stay relaxed."],
-      ["Reverse Prayer Prep", "Bring backs of hands or palms behind the body and breathe into wrist flexion."],
-      ["Tabletop Forward Rock", "Rock shoulders forward over wrists while pressing through every knuckle."],
-      ["Tabletop Lateral Rock", "Shift side to side to prepare uneven hand loading."],
-      ["Tabletop Wrist Circles", "Circle the shoulders around the hands to warm multiple wrist angles."],
-      ["Fingertip Plank Lean", "Use fingertips as brakes while leaning forward in a short plank."],
-      ["Palm Suction Drill", "Grip the floor lightly with finger pads without clawing."],
-      ["Wrist Extension Isometric", "Press the fingers into the floor and hold a low-intensity extension angle."],
-      ["Wrist Flexion Isometric", "Press the backs of the hands gently down and hold without sharp sensation."],
-      ["Forearm Pronation Supination", "Rotate palms up and down with elbows bent to warm the forearm line."],
-      ["Radial Ulnar Deviation", "Move the hand side to side like a windshield wiper."],
-      ["Loaded Wrist Wave", "Roll pressure from palm heel to knuckles and back in tabletop."],
-      ["Single-Arm Wrist Lean", "Shift a little more weight into one hand while the other hand assists."],
-      ["Wall Finger Push", "Press fingers into the wall and rebound lightly to wake finger strength."],
-      ["Wall Wrist Extension Lean", "Lean into palms on the wall before moving the shape to the floor."],
-      ["Wrist Push-Up From Knees", "Use a tiny range to lift and lower the palm heel with knees down."],
-      ["Fist to Palm Transition", "Move from fists to flat hands slowly to prepare changing hand shapes."],
-      ["Planche Lean Prep", "Lean shoulders beyond wrists with elbows straight and ribs organized."],
-      ["Wrist Shake Reset", "Shake out hands and forearms between loading sets to reduce guarding."],
-      ["Forearm Soft-Tissue Glide", "Use the opposite hand to glide along flexors and extensors before loading."],
-      ["Rubber Band Finger Opens", "Open fingers against light resistance to balance gripping work."],
-      ["Thumb Line Prep", "Move the thumb through circles and light opposition for broader hand support."],
-      ["Wrist Cooldown Fold", "Fold hands gently in flexion after loaded handstand or arm-balance work."],
-      ["Quadruped Finger Turn-Out", "Turn fingers outward gradually and shift only as far as the wrist stays calm."],
-      ["Quadruped Finger Turn-Back", "Turn fingers toward knees and lean back gently to open forearm flexors."],
-      ["Straight-Arm Palm Drag", "Drag the palms toward the knees without moving them to build isometric strength."],
-    ],
-  },
-  {
     section: "Mobility",
     area: "Primary-inspired vinyasa",
     level: "Base",
@@ -361,36 +322,6 @@ const movementFamilies = [
       ["Elbow Lever Line", "Balance body tension across the elbows."],
       ["QDR Freeze Prep", "Load one bent arm and organize the side body."],
       ["Side Plank Float", "Build lateral shoulder stability before freeze work."],
-      ["Crane Hold", "Straighten the arms more fully while knees stay high on the upper arms."],
-      ["Crow to Tripod Transition", "Lower with control from hand balance toward a head-supported base."],
-      ["Tripod Egg Balance", "Use a compact shape to build neck-aware tripod control."],
-      ["Tripod Straddle Balance", "Open the legs wide while keeping the head and hands evenly loaded."],
-      ["Tripod Pike Balance", "Keep legs together and hips high in a compressed tripod line."],
-      ["Forearm Crow Prep", "Load knees onto upper arms from a forearm base."],
-      ["Dragonfly Prep", "Hook one foot across the arm and rotate before shifting weight."],
-      ["Flying Splits Prep", "Use a lunge-like arm balance shape with one leg reaching back."],
-      ["One-Leg Crow Prep", "Extend one leg back from crow while keeping elbows hugging in."],
-      ["Crow Jump-Back Prep", "Compress and float the feet back with quiet shoulders."],
-      ["Crow Jump-Through Prep", "Thread legs forward from hand support with hip compression."],
-      ["Elephant Trunk Prep", "Hook one leg high over the arm and lift the hips with straight-arm pressure."],
-      ["Koundinya Split Prep", "Rotate and split the legs from a side-arm balance base."],
-      ["Side Crow Scissor Prep", "Extend one leg from side crow while keeping the twist stable."],
-      ["Baby Crow Prep", "Use forearms and knees to learn compact arm-balance pressure."],
-      ["Flying Lizard Prep", "Thread the shoulder under the leg and shift into hand support."],
-      ["Handstand Crow Negative", "Lower from handstand toward crow with compression."],
-      ["Crow Press Lean", "Lean forward enough to make the hips light before trying to press."],
-      ["Planche Tuck Lean", "Round upper back and lean forward with knees tucked."],
-      ["Pseudo Planche Push-Up", "Use turned-out hands and forward lean for straight-arm strength."],
-      ["L-Sit Lift Prep", "Press hands down and lift the hips or heels from the floor."],
-      ["Tuck Sit Hold", "Compress knees toward chest while pushing the floor away."],
-      ["Straddle Sit Lift", "Lift heels in a wide seated shape with active quads."],
-      ["Manna Line Prep", "Lean back and press hands down to train deep shoulder extension."],
-      ["Breakdance Chair Freeze Prep", "Load one elbow into the torso and extend the legs with control."],
-      ["Turtle Freeze Prep", "Balance low with elbows connected to torso and legs tucked."],
-      ["Shoulder Freeze Prep", "Use shoulder and side-body contact to understand freeze alignment."],
-      ["One-Hand Side Plank Lean", "Prepare single-arm side support with feet staggered."],
-      ["Air Baby Switch Prep", "Shift between air-baby sides without collapsing into the shoulder."],
-      ["Freeze Exit Step-Through", "Practice exiting freezes into a controlled lunge or seated shape."],
     ],
   },
   {
@@ -422,6 +353,17 @@ const movementFamilies = [
   },
 ];
 
+const variationMethods = [
+  ["Base hold", "Hold the shape and breathe steadily."],
+  ["Elastic pulses", "Use small rhythmic pulses without forcing end range."],
+  ["Slow eccentric", "Move into the shape slowly and resist the return."],
+  ["Isometric press", "Press into the floor, wall, or prop for 5 breaths."],
+  ["Active lift-off", "Lift away from the support using the target muscles."],
+  ["Transition link", "Connect the movement to the next pose in a smooth flow."],
+  ["Prop-supported", "Use blocks, wall, strap, or blanket to make the range precise."],
+  ["End-range breath", "Stay near the edge and use slow exhales to reduce guarding."],
+];
+
 function slugify(value) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 }
@@ -430,15 +372,19 @@ function buildPoseLibrary() {
   const generated = [];
 
   movementFamilies.forEach((family) => {
-    family.items.forEach(([name, cue]) => {
-      generated.push({
-        name,
-        originalBase: name,
-        section: family.section,
-        area: family.area,
-        level: family.level,
-        cue,
-        image: `assets/avatars/${slugify(name)}.png`,
+    family.items.forEach(([name, cue], itemIndex) => {
+      variationMethods.forEach(([method, methodCue], methodIndex) => {
+        if (generated.length >= 240) return;
+        const poseName = methodIndex === 0 ? name : `${name} - ${method}`;
+        generated.push({
+          name: poseName,
+          originalBase: name,
+          section: family.section,
+          area: family.area,
+          level: methodIndex > 4 ? "Advanced" : family.level,
+          cue: `${cue} ${methodCue}`,
+          image: `assets/avatars/${slugify(poseName)}.png`,
+        });
       });
     });
   });
@@ -446,114 +392,11 @@ function buildPoseLibrary() {
   return generated;
 }
 
-const customHandstandBuilderPoses = [
-  {
-    name: "Toes and Nose Handstand",
-    originalBase: "Toes and Nose Handstand",
-    section: "Handstand",
-    area: "Custom handstand builder",
-    level: "Base",
-    cue: "Face the wall with toes and nose close to the wall; push tall through the shoulders and keep ribs contained.",
-    image: "assets/avatars-custom/toes-and-nose-handstand.png",
-  },
-  {
-    name: "Handstand Wall Walks",
-    originalBase: "Handstand Wall Walks",
-    section: "Handstand",
-    area: "Custom handstand builder",
-    level: "Intermediate",
-    cue: "Walk feet up the wall and hands in only as far as you can keep a clean hollow line.",
-    image: "assets/avatars-custom/handstand-wall-walks.png",
-  },
-  {
-    name: "Tuck Entry",
-    originalBase: "Tuck Entry",
-    section: "Handstand",
-    area: "Custom handstand builder",
-    level: "Intermediate",
-    cue: "Enter compact with knees pulled in before extending toward the handstand line.",
-    image: "assets/avatars-custom/tuck-entry.png",
-  },
-  {
-    name: "Straddle Entry",
-    originalBase: "Straddle Entry",
-    section: "Handstand",
-    area: "Custom handstand builder",
-    level: "Intermediate",
-    cue: "Open the legs wide to control momentum and find the stack before bringing the legs together.",
-    image: "assets/avatars-custom/straddle-entry.png",
-  },
-  {
-    name: "Pike Handstand Entry",
-    originalBase: "Pike Handstand Entry",
-    section: "Handstand",
-    area: "Custom handstand builder",
-    level: "Advanced",
-    cue: "Keep legs together, hips high, and shoulders elevated as you float from pike toward the line.",
-    image: "assets/avatars-custom/pike-handstand-entry.png",
-  },
-  {
-    name: "Compression Pike Lifts",
-    originalBase: "Compression Pike Lifts",
-    section: "Handstand",
-    area: "Custom handstand builder",
-    level: "Base",
-    cue: "Press hands beside the legs and lift heels or legs using hip flexor compression instead of momentum.",
-    image: "assets/avatars-custom/compression-pike-lifts.png",
-  },
-  {
-    name: "Freestanding Endurance Holds",
-    originalBase: "Freestanding Endurance Holds",
-    section: "Handstand",
-    area: "Custom handstand builder",
-    level: "Advanced",
-    cue: "Hold only while the line stays organized; use fingertip pressure and shoulder height to correct balance.",
-    image: "assets/avatars-custom/freestanding-endurance-holds.png",
-  },
-  {
-    name: "Wall Supported One Arm Shifts",
-    originalBase: "Wall Supported One Arm Shifts",
-    section: "Handstand",
-    area: "Custom handstand builder",
-    level: "Advanced",
-    cue: "Use the wall while shifting weight from one hand to the other without dropping shoulder height.",
-    image: "assets/avatars-custom/wall-supported-one-arm-shifts.png",
-  },
-];
-
-const poses = [...customHandstandBuilderPoses, ...buildPoseLibrary()];
+const poses = buildPoseLibrary();
 
 const warmupOptions = poses
   .filter((pose) => pose.section === "Elasticity")
   .slice(0, 24);
-
-const flowTemplates = [
-  {
-    title: "Wrist Warm-Up Flow",
-    focus: "Before handstands or arm balances",
-    items: ["Wall Wrist Spring", "Tabletop Wrist Rock", "Palm Line Mapping", "Scapular Plank", "Down Dog Shoulder Bounce"],
-  },
-  {
-    title: "Back Opening Flow",
-    focus: "Front-body opening with shoulder control",
-    items: ["Locust Back-Line Lift", "Floor Bow Rock", "Camel Breath Lift", "Bridge Shoulder Opener", "Wheel Prep Blocks"],
-  },
-  {
-    title: "Splits Prep Flow",
-    focus: "Hip flexors, hamstrings, and active range",
-    items: ["Low Lunge Hip Bounce", "Low Lunge to Pyramid Oscillation", "Half Split Active Hold", "Front Split Block Track", "Standing Split Toe Tap"],
-  },
-  {
-    title: "Handstand Line Prep",
-    focus: "Wrists, shoulders, hollow line, balance",
-    items: ["Wrist Extension Load", "Down Dog Shoulder Shrug", "Wall Plank Line", "Chest-to-Wall Hold", "Toe Pull Balance"],
-  },
-  {
-    title: "Elastic Mobility Starter",
-    focus: "Low-impact fascia warm-up",
-    items: ["Down Dog Shoulder Bounce", "Low Lunge Hip Bounce", "Runner Switch Bounce", "Cossack Side-to-Side Spring", "Frog Rock"],
-  },
-];
 
 const printableFlowPrograms = [
   {
@@ -651,6 +494,60 @@ const printableFlowPrograms = [
       "Freestanding exit map",
     ],
   },
+  {
+    title: "Handstand PDF 1: Line and Wall Control",
+    subtitle: "Beginner-to-intermediate handstand packet",
+    duration: "30-40 min",
+    intention:
+      "A clean handstand practice focused on wrist prep, shoulder elevation, wall line, toe pulls, and safe exits.",
+    cues: [
+      "Keep every set short enough that the shoulders stay elevated.",
+      "Use fingertips as brakes and ribs as your line check.",
+      "Step down before fatigue turns the line into a backbend.",
+      "Pair this with 5-7 elasticity or wrist prep movements first.",
+    ],
+    sequence: [
+      "Wrist CARs",
+      "Palm Heel Lift-Offs",
+      "Tabletop Forward Rock",
+      "Scapular Push-Up",
+      "Down Dog Shoulder Shrug",
+      "Wall Hollow Body",
+      "Wall Plank Line",
+      "Toes and Nose Handstand",
+      "Chest-to-Wall Hold",
+      "Toe Pull Balance",
+      "Freestanding Exit Map",
+      "Wrist Cooldown Fold",
+    ],
+  },
+  {
+    title: "Handstand PDF 2: Entries and Endurance",
+    subtitle: "Intermediate handstand development packet",
+    duration: "35-50 min",
+    intention:
+      "A stronger handstand practice built around tuck, straddle, and pike entries plus endurance holds and one-arm weight shifts.",
+    cues: [
+      "Warm compression before entry work.",
+      "Practice entries with low volume and high accuracy.",
+      "Rest before wrists or shoulders feel irritated.",
+      "Use the wall for one-arm shifts until shoulder height stays even.",
+    ],
+    sequence: [
+      "Wall Wrist Spring",
+      "Planche Lean Line",
+      "Compression Pike Lifts",
+      "Straddle Compression Pulses",
+      "Handstand Wall Walks",
+      "Tuck Entry",
+      "Straddle Entry",
+      "Pike Handstand Entry",
+      "Freestanding Endurance Holds",
+      "Wall Supported One Arm Shifts",
+      "Handstand Snap-Down",
+      "Forearm Soft-Tissue Glide",
+    ],
+  },
 ];
 
 const sectionListEl = document.querySelector("#section-list");
@@ -659,9 +556,9 @@ const builderFlowEl = document.querySelector("#builder-flow");
 const warmupGridEl = document.querySelector("#warmup-grid");
 const selectedWarmupsEl = document.querySelector("#selected-warmups");
 const warmupCountEl = document.querySelector("#warmup-count");
-const templateGridEl = document.querySelector("#template-grid");
 const flowProgramGridEl = document.querySelector("#flow-program-grid");
 const filterButtons = document.querySelectorAll(".filter-button");
+const printBuilderFlowEl = document.querySelector("#print-builder-flow");
 const selectedWarmups = new Set();
 const selectedFlow = [];
 
@@ -746,10 +643,9 @@ function renderBuilderFlow() {
 
   if (!selectedFlow.length) {
     const defaultFlow = [
-      "Use the pose library filters above.",
-      "Click Add to flow on 5-12 movements.",
-      "Start with elasticity or joint prep.",
-      "Add your peak skill or range target.",
+      "Filter the pose library above.",
+      "Click Add to flow on individual poses.",
+      "Or add a full PDF flow from the printable flow section.",
       "Print the page or save it as a PDF.",
     ];
     builderFlowEl.innerHTML = defaultFlow.map((item) => `<li>${item}</li>`).join("");
@@ -821,24 +717,6 @@ function renderSelectedWarmups() {
     : "<li>Select 5-7 movements for a complete elastic warm-up.</li>";
 }
 
-function renderTemplates() {
-  if (!templateGridEl) return;
-
-  templateGridEl.innerHTML = flowTemplates
-    .map(
-      (template) => `
-        <article class="template-card">
-          <p>${template.focus}</p>
-          <h3>${template.title}</h3>
-          <ol>
-            ${template.items.map((item) => `<li>${item}</li>`).join("")}
-          </ol>
-        </article>
-      `,
-    )
-    .join("");
-}
-
 function renderPrintableFlows() {
   if (!flowProgramGridEl) return;
 
@@ -878,6 +756,7 @@ function renderPrintableFlows() {
               )
               .join("")}
           </ol>
+          <button class="button primary add-flow-button" type="button" data-flow="${program.title}">Add full flow to builder</button>
           <button class="button secondary print-flow-button" type="button">Print this flow</button>
         </article>
       `,
@@ -886,6 +765,30 @@ function renderPrintableFlows() {
 
   flowProgramGridEl.querySelectorAll(".print-flow-button").forEach((button) => {
     button.addEventListener("click", () => window.print());
+  });
+
+  flowProgramGridEl.querySelectorAll(".add-flow-button").forEach((button) => {
+    button.addEventListener("click", () => {
+      const program = printableFlowPrograms.find((item) => item.title === button.dataset.flow);
+      if (!program) return;
+      selectedFlow.length = 0;
+      program.sequence.forEach((name) => {
+        const match = poses.find((pose) => slugify(pose.originalBase || pose.name) === slugify(name));
+        selectedFlow.push(
+          match || {
+            name,
+            originalBase: name,
+            section: "Flow",
+            area: program.title,
+            level: "Sequence",
+            cue: "Use the printable flow cueing for this movement.",
+            image: `assets/avatars/${slugify(name)}.png`,
+          },
+        );
+      });
+      renderBuilderFlow();
+      document.querySelector("#sequence-builder")?.scrollIntoView({ behavior: "smooth" });
+    });
   });
 }
 
@@ -968,10 +871,21 @@ if (printButtonEl) {
   });
 }
 
+if (printBuilderFlowEl) {
+  printBuilderFlowEl.addEventListener("click", () => {
+    document.body.classList.add("print-builder");
+    window.print();
+  });
+}
+
 window.addEventListener("beforeprint", () => {
   document.querySelectorAll("details").forEach((item) => {
     item.open = true;
   });
+});
+
+window.addEventListener("afterprint", () => {
+  document.body.classList.remove("print-builder");
 });
 
 renderSections();
@@ -979,6 +893,5 @@ renderPoses();
 renderBuilderFlow();
 renderWarmups();
 renderSelectedWarmups();
-renderTemplates();
 renderPrintableFlows();
 renderSectionPage(getSectionIndex());
