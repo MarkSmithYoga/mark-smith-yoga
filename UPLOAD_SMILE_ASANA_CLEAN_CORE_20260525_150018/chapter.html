@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Section | Smile Asana</title>
+    <meta
+      name="description"
+      content="A Smile Asana section page for pose selection, practice sheets, and printable yoga sequence plans."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Smile Asana home">
+        <span class="brand-mark">SA</span>
+        <span>Smile Asana</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html#sections">Sections</a>
+        <a href="index.html#pose-library">Pose Library</a>
+        <a href="index.html#sequence-builder">Builder</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="chapter-hero" aria-labelledby="chapter-title">
+        <a class="back-link" href="index.html#sections">Back to sections</a>
+        <div class="chapter-meta" id="chapter-meta"></div>
+        <h1 id="chapter-title"></h1>
+        <p id="chapter-summary"></p>
+        <div class="print-actions">
+          <button class="button primary" id="print-pdf" type="button">Print / Save PDF</button>
+        </div>
+      </section>
+
+      <section class="chapter-page-layout" aria-label="Selected section">
+        <article class="feature-panel section-detail-panel">
+          <div class="avatar-dropzone">
+            <span>Practice sheet notes</span>
+            <strong id="avatar-title"></strong>
+            <p>
+              Use this page as a simple reference for the section focus, movement cues,
+              and offline practice structure.
+            </p>
+          </div>
+          <div class="chapter-detail">
+            <p id="chapter-description"></p>
+            <div class="detail-grid">
+              <div>
+                <span>Focus</span>
+                <strong id="chapter-focus"></strong>
+              </div>
+              <div>
+                <span>Best for</span>
+                <strong id="chapter-best"></strong>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <aside class="guide-panel" aria-labelledby="guide-title">
+          <p class="eyebrow">Expansive guide</p>
+          <h2 id="guide-title">Training logic</h2>
+          <div id="chapter-guide"></div>
+        </aside>
+      </section>
+
+      <section class="printable-guide" aria-labelledby="printable-title">
+        <p class="eyebrow">Offline practice sheet</p>
+        <h2 id="printable-title">Pose flow and cues</h2>
+        <p id="printable-intro"></p>
+        <ol id="offline-practice"></ol>
+        <div class="offline-notes" id="offline-notes"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Smile Asana</span>
+      <span>Custom practice sheets and handstand development plans.</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
