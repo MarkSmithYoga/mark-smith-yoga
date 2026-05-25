@@ -1,4 +1,4 @@
-# Mark Smith Yoga - Next Steps
+# Smile Asana - Next Steps
 
 ## What is already uploaded to GitHub
 
@@ -14,7 +14,7 @@ https://github.com/MarkSmithYoga/mark-smith-yoga
 
 ## What still needs to be uploaded after image work
 
-Upload the full `assets` folder after the avatar sheets are cropped into individual pose images.
+Upload the full `assets` folder after the practice images are cropped into individual pose images.
 
 Current generated source sheets are saved here:
 

@@ -1,4 +1,4 @@
-# Mark Smith Yoga Website
+# Smile Asana Website
 
 Open `index.html` in a browser to preview the site.
 
@@ -8,7 +8,7 @@ The site is organized into three sections:
 - Handstand Specific Development
 - Flexibility Focused Range of Motion
 
-This version is built around pose selection, avatar PDF packets, printable practice
+This version is built around pose selection, Practice sheet packets, printable practice
 sheets, flexibility education, and handstand development.
 
 To change the sections, edit the `sections` list in `script.js`.

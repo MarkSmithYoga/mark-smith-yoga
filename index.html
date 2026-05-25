@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Mark Smith Yoga</title>
+    <title>Smile Asana</title>
     <meta
       name="description"
       content="A modern yoga sequencing and pose library focused on mobility, flexibility, and handstand development."
@@ -18,14 +18,13 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Mark Smith Yoga home">
-        <span class="brand-mark">MS</span>
-        <span>Mark Smith Yoga</span>
+      <a class="brand" href="#top" aria-label="Smile Asana home">
+        <span class="brand-mark">SA</span>
+        <span>Smile Asana</span>
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#pose-library">Pose Library</a>
         <a href="#sequence-builder">Builder</a>
-        <a href="#printable-flows">Printable Flows</a>
         <a href="#sections">Sections</a>
       </nav>
     </header>
@@ -33,15 +32,15 @@
     <main id="top">
       <section class="hero planner-hero" aria-labelledby="hero-title">
         <div class="hero-content">
-          <p class="eyebrow">Modern sequencing studio</p>
+          <p class="eyebrow">Custom practice builder</p>
           <h1 id="hero-title">Build flexible bodies and stronger handstands.</h1>
           <p class="hero-copy">
-            A modern pose-selection and sequence-planning space for avatar PDFs, printable
-            flows, flexibility education, and handstand-specific progression work.
+            Pick movements, build a custom mobility or yoga flow, and print a clean
+            practice sheet for offline training.
           </p>
           <div class="hero-actions">
             <a class="button primary" href="#pose-library">Start building</a>
-            <a class="button secondary" href="#printable-flows">Use a ready flow</a>
+            <a class="button secondary" href="#sequence-builder">Print custom flow</a>
           </div>
         </div>
         <div class="builder-preview" aria-label="Sequence preview">
@@ -57,7 +56,7 @@
             <span>Exit drill</span>
           </div>
           <div class="preview-footer">
-            <span>Avatar PDF ready</span>
+            <span>Custom sheet ready</span>
             <span>5 poses</span>
           </div>
         </div>
@@ -81,12 +80,11 @@
       <section class="section intro" aria-labelledby="about-title">
         <div>
           <p class="eyebrow">Offline-first practice</p>
-          <h2 id="about-title">A visual practice-planning system for flows, avatars, and print.</h2>
+          <h2 id="about-title">A simple flow builder for practice sheets.</h2>
         </div>
         <p>
-          Each section is built around pose selection, movement notes, sequencing logic,
-          printable practice sheets, and future avatar PDFs that can hold complete flows and
-          handstand programs.
+          Choose a category, add the movements you want, arrange the order, and print a
+          simple practice sheet without needing a video or app open.
         </p>
       </section>
 
@@ -137,7 +135,7 @@
           <h2 id="builder-title">Arrange the movements, then print a clean practice sheet.</h2>
           <p>
             Add poses from the library, move them up or down, remove what you do not want,
-            or load a complete ready-made flow below.
+            then print your custom practice sheet.
           </p>
         </div>
         <div class="builder-layout">
@@ -150,7 +148,7 @@
               <button class="text-button" id="clear-builder-flow" type="button">Clear</button>
             </div>
             <ol id="builder-flow"></ol>
-            <button class="button primary builder-print-button" id="print-builder-flow" type="button">Print custom flow</button>
+            <button class="button primary builder-print-button" id="print-builder-flow" type="button" disabled>Print custom flow</button>
           </div>
           <div class="builder-column dark">
             <h3>Simple workflow</h3>
@@ -166,7 +164,7 @@
 
       <section class="print-sheet" id="print-sheet" aria-label="Printable custom flow">
         <div class="print-sheet-header">
-          <p>Mark Smith Yoga</p>
+          <p>Smile Asana</p>
           <h2 id="print-sheet-title">Custom Practice Flow</h2>
           <span id="print-sheet-meta">Build, breathe, practice.</span>
         </div>
@@ -197,24 +195,11 @@
         </div>
       </section>
 
-      <section class="section printable-flow-section" id="printable-flows" aria-labelledby="printable-flows-title">
-        <div class="section-heading">
-          <p class="eyebrow">Printable flow library</p>
-          <h2 id="printable-flows-title">Ready-made printable PDF flows.</h2>
-          <p>
-            These printable flows use original movement language, modern mobility cues, and
-            avatar-ready pose slots. Add a whole flow to the builder with one click, then edit
-            or print it.
-          </p>
-        </div>
-        <div class="flow-program-grid" id="flow-program-grid"></div>
-      </section>
-
     </main>
 
     <footer class="site-footer">
-      <span>Mark Smith Yoga</span>
-      <span>Modern pose library, sequence builder, and printable practice system.</span>
+      <span>Smile Asana</span>
+      <span>Pose library, custom flow builder, and offline practice sheets.</span>
     </footer>
 
     <script src="script.js"></script>

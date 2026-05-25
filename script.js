@@ -9,7 +9,7 @@ const sections = [
       "A modern vinyasa-mobility section for building strength through moving range. These flows use transitions, loaded positions, and breath pacing to make mobility feel integrated rather than isolated.",
     focus: "Active mobility, transitions, hips, shoulders, spine",
     bestFor: "Daily flow practice, warmups, and athletic mobility",
-    avatarTitle: "Mobility Flow Avatar Pack",
+    avatarTitle: "Mobility Flow Notes",
     guide: [
       {
         title: "Modern mobility lens",
@@ -20,8 +20,8 @@ const sections = [
         body: "Start with low-load joint prep, move into flowing transitions, then finish with slower positional work.",
       },
       {
-        title: "PDF direction",
-        body: "Avatar sheets can show the whole flow as a visual map, with breath counts and transition cues under each pose.",
+        title: "Practice sheet direction",
+        body: "Practice sheets can show the whole flow as a visual map, with breath counts and transition cues under each pose.",
       },
     ],
     offlinePractice: [
@@ -59,7 +59,7 @@ const sections = [
       "This section is the technical center of the site. It focuses on handstand preparation, line development, shoulder elevation, rib control, balance drills, kick-up skill, press prep, and exit confidence.",
     focus: "Wrists, shoulders, hollow line, wall drills, balance",
     bestFor: "Handstand students and strength-skill training blocks",
-    avatarTitle: "Handstand Development Avatar Pack",
+    avatarTitle: "Handstand Development Notes",
     guide: [
       {
         title: "Deep handstand focus",
@@ -70,8 +70,8 @@ const sections = [
         body: "Use short high-quality sets: prep, shape drill, wall drill, entry drill, exit drill, rest. Fatigue should not rewrite the line.",
       },
       {
-        title: "PDF direction",
-        body: "Avatar PDFs can be grouped into skill packets: wrist prep, wall line, balance, kick-up entries, press prep, and cooldown.",
+        title: "Practice sheet direction",
+        body: "Practice sheets can be grouped into skill packets: wrist prep, wall line, balance, kick-up entries, press prep, and cooldown.",
       },
     ],
     offlinePractice: [
@@ -109,7 +109,7 @@ const sections = [
       "A flexibility section built around current range-of-motion thinking: progressive loading, active control, nervous-system pacing, joint position, and repeatable practice rather than passive forcing.",
     focus: "Hips, hamstrings, shoulders, adductors, active range",
     bestFor: "Flexibility cycles, recovery days, and deep range work",
-    avatarTitle: "Flexibility Range Avatar Pack",
+    avatarTitle: "Flexibility Range Notes",
     guide: [
       {
         title: "Modern flexibility lens",
@@ -120,8 +120,8 @@ const sections = [
         body: "Warm the joint, enter the range gradually, add active engagement, then hold or pulse with enough support to stay relaxed.",
       },
       {
-        title: "PDF direction",
-        body: "Avatar PDFs can show progressive ranges, prop setups, breath counts, and active/passive versions of the same position.",
+        title: "Practice sheet direction",
+        body: "Practice sheets can show progressive ranges, prop setups, breath counts, and active/passive versions of the same position.",
       },
     ],
     offlinePractice: [
@@ -393,6 +393,79 @@ const duplicateVisualSlugs = new Set([
   "puppy-pose-rib-pulse",
 ]);
 
+const strongPoseSlugs = new Set([
+  "wrist-cars",
+  "finger-tendon-waves",
+  "palm-heel-lift-offs",
+  "tabletop-wrist-rock",
+  "back-of-hand-rock",
+  "prayer-wrist-pulse",
+  "wall-wrist-spring",
+  "finger-pad-presses",
+  "down-dog-shoulder-bounce",
+  "scapular-push-up",
+  "wall-hollow-body",
+  "wall-plank-line",
+  "chest-to-wall-hold",
+  "toe-pull-balance",
+  "handstand-wall-walks",
+  "toes-and-nose-handstand",
+  "tuck-entry",
+  "straddle-entry",
+  "pike-handstand-entry",
+  "freestanding-endurance-holds",
+  "wall-supported-one-arm-shifts",
+  "compression-pike-lifts",
+  "straddle-compression-pulses",
+  "press-compression-prep",
+  "l-sit-block-hold",
+  "planche-lean-line",
+  "crow-load-prep",
+  "baby-crow-prep",
+  "side-crow-coil",
+  "eight-angle-prep",
+  "firefly-prep",
+  "flying-pigeon-prep",
+  "air-baby-prep",
+  "baby-freeze-base",
+  "low-lunge-hip-bounce",
+  "low-lunge-to-pyramid-oscillation",
+  "low-lunge-to-standing-split-wave",
+  "half-split-active-hold",
+  "standing-split-toe-tap",
+  "supine-hamstring-strap",
+  "front-split-block-track",
+  "pancake-hinge",
+  "frog-rock",
+  "cossack-side-to-side-spring",
+  "half-pigeon-active",
+  "pigeon-supported-range",
+  "ninety-ninety-lift-off",
+  "internal-rotation-hip-switch",
+  "bridge-shoulder-opener",
+  "wheel-prep-blocks",
+  "camel-breath-lift",
+  "locust-back-line-lift",
+  "floor-bow-rock",
+  "chest-opener-block-support",
+  "prone-swimmer-sweep",
+  "child-to-down-dog-wave",
+  "chair-power-fold",
+  "warrior-one-hip-drive",
+  "warrior-two-lateral-reach",
+  "extended-side-angle-spiral",
+  "triangle-long-line-reach",
+  "revolved-triangle-line",
+  "wide-fold-center-line",
+  "side-lunge-floor-switch",
+  "airplane-hinge",
+  "side-plank-line",
+  "boat-hold-pulses",
+  "reverse-plank-line",
+  "supine-twist-reset",
+  "rest-shape",
+]);
+
 const avatarBackupPool = [
   "assets/avatars/air-baby-prep.png",
   "assets/avatars/airplane-hinge.png",
@@ -495,6 +568,7 @@ function uniqueBasePoses(poseList) {
   const seen = new Set();
   return poseList.filter((pose) => {
     const key = slugify(pose.originalBase || pose.name);
+    if (!strongPoseSlugs.has(key)) return false;
     if (duplicateVisualSlugs.has(key)) return false;
     if (seen.has(key)) return false;
     seen.add(key);
@@ -527,250 +601,6 @@ const warmupOptions = poses
   .filter((pose) => pose.name === pose.originalBase)
   .slice(0, 24);
 
-const printableFlowPrograms = [
-  {
-    title: "Primary-Inspired Mobility Flow",
-    subtitle: "Long-form vinyasa map with mobility-focused cueing",
-    duration: "75-90 min",
-    intention:
-      "A structured full-body flow inspired by the arc of a traditional primary practice, translated into modern mobility language.",
-    cues: [
-      "Keep transitions smooth and repeatable before increasing depth.",
-      "Use active feet, soft knees, and controlled breathing in forward folds.",
-      "Treat seated folds as hamstring and spine organization, not passive collapse.",
-      "Use props for lotus-like hip shapes so the knees stay quiet.",
-    ],
-    sequence: [
-      "Breath-led standing reach",
-      "Forward fold toe grip",
-      "Chair power fold",
-      "Warrior one hip drive",
-      "Triangle long-line reach",
-      "Revolved triangle line",
-      "Wide fold center line",
-      "Side lunge floor switch",
-      "Balance toe hold prep",
-      "Side balance leg open",
-      "Seated forward fold active",
-      "Reverse plank line",
-      "One-leg fold three angles",
-      "Marichi twist prep",
-      "Boat hold pulses",
-      "Turtle fold prep",
-      "Wide seated compression",
-      "Bridge to wheel prep",
-      "Fish chest opener",
-      "Rest shape",
-    ],
-  },
-  {
-    title: "Power Vinyasa Flow Packet",
-    subtitle: "Baptiste-inspired structure with original movement language",
-    duration: "45-60 min",
-    intention:
-      "A strong power-vinyasa format using heat, standing strength, core, back opening, hip opening, and integration.",
-    cues: [
-      "Build heat through breath and rhythm before asking for bigger shapes.",
-      "Prioritize spinal length in twisting and side-body positions.",
-      "Use arm balances as optional skill inserts rather than mandatory peak poses.",
-      "Close with hips, twists, and quiet breath to absorb the work.",
-    ],
-    sequence: [
-      "Child to down dog wave",
-      "Ragdoll spine pour",
-      "Crescent lunge reach",
-      "Revolved crescent coil",
-      "Warrior two lateral reach",
-      "Extended side angle spiral",
-      "Triangle strength hold",
-      "Eagle wrap balance",
-      "Airplane hinge",
-      "Half moon wall line",
-      "Crow load prep",
-      "Side plank line",
-      "Locust back-line lift",
-      "Floor bow rock",
-      "Camel breath lift",
-      "Half pigeon active",
-      "Double pigeon stack",
-      "Supine twist reset",
-      "Bound-angle rest",
-      "Rest shape",
-    ],
-  },
-  {
-    title: "Handstand Prep Flow Insert",
-    subtitle: "Printable bridge between warm-up and skill work",
-    duration: "20-30 min",
-    intention:
-      "A compact flow section for wrists, shoulders, hollow line, wall work, and safe entry/exit practice.",
-    cues: [
-      "Stop each drill while the shape is still clean.",
-      "Use fingertips as brakes and shoulder elevation as the main support strategy.",
-      "Exit practice belongs before long holds.",
-      "Choose 5-7 elastic warm-ups before this section.",
-    ],
-    sequence: [
-      "Wall wrist spring",
-      "Tabletop wrist rock",
-      "Scapular push-up",
-      "Down dog shoulder shrug",
-      "Wall hollow body",
-      "Wall plank line",
-      "Chest-to-wall hold",
-      "Toe pull balance",
-      "Tuck entry accuracy",
-      "Freestanding exit map",
-    ],
-  },
-  {
-    title: "Handstand PDF 1: Line and Wall Control",
-    subtitle: "Beginner-to-intermediate handstand packet",
-    duration: "30-40 min",
-    intention:
-      "A clean handstand practice focused on wrist prep, shoulder elevation, wall line, toe pulls, and safe exits.",
-    cues: [
-      "Keep every set short enough that the shoulders stay elevated.",
-      "Use fingertips as brakes and ribs as your line check.",
-      "Step down before fatigue turns the line into a backbend.",
-      "Pair this with 5-7 elasticity or wrist prep movements first.",
-    ],
-    sequence: [
-      "Wrist CARs",
-      "Palm Heel Lift-Offs",
-      "Tabletop Forward Rock",
-      "Scapular Push-Up",
-      "Down Dog Shoulder Shrug",
-      "Wall Hollow Body",
-      "Wall Plank Line",
-      "Toes and Nose Handstand",
-      "Chest-to-Wall Hold",
-      "Toe Pull Balance",
-      "Freestanding Exit Map",
-      "Wrist Cooldown Fold",
-    ],
-  },
-  {
-    title: "Handstand PDF 2: Entries and Endurance",
-    subtitle: "Intermediate handstand development packet",
-    duration: "35-50 min",
-    intention:
-      "A stronger handstand practice built around tuck, straddle, and pike entries plus endurance holds and one-arm weight shifts.",
-    cues: [
-      "Warm compression before entry work.",
-      "Practice entries with low volume and high accuracy.",
-      "Rest before wrists or shoulders feel irritated.",
-      "Use the wall for one-arm shifts until shoulder height stays even.",
-    ],
-    sequence: [
-      "Wall Wrist Spring",
-      "Planche Lean Line",
-      "Compression Pike Lifts",
-      "Straddle Compression Pulses",
-      "Handstand Wall Walks",
-      "Tuck Entry",
-      "Straddle Entry",
-      "Pike Handstand Entry",
-      "Freestanding Endurance Holds",
-      "Wall Supported One Arm Shifts",
-      "Handstand Snap-Down",
-      "Forearm Soft-Tissue Glide",
-    ],
-  },
-  {
-    title: "Wrist Prep Quick Sheet",
-    subtitle: "Low-impact wrist and finger prep before handstands",
-    duration: "8-12 min",
-    intention:
-      "A simple wrist sequence for loading the hands without rushing into full bodyweight.",
-    cues: [
-      "Keep pressure spread through the whole palm.",
-      "Use small ranges first, then add bodyweight gradually.",
-      "Stop before the wrist feels sharp or compressed.",
-      "Repeat this before handstands, arm balances, or push work.",
-    ],
-    sequence: [
-      "Wrist CARs",
-      "Finger Tendon Waves",
-      "Palm Heel Lift-Offs",
-      "Tabletop Wrist Rock",
-      "Back-of-Hand Rock",
-      "Prayer Wrist Pulse",
-      "Wall Wrist Spring",
-      "Finger Pad Presses",
-    ],
-  },
-  {
-    title: "Beginner Wall Handstand Flow",
-    subtitle: "Clear wall-supported handstand line practice",
-    duration: "18-25 min",
-    intention:
-      "A beginner-friendly handstand flow that keeps the wall as the main teacher for line, pressure, and exit control.",
-    cues: [
-      "Keep sets short and repeatable.",
-      "Use the wall to measure ribs, shoulders, and breath.",
-      "Come down before the shoulders sink.",
-      "Finish with one clean exit drill.",
-    ],
-    sequence: [
-      "Wrist CARs",
-      "Scapular Push-Up",
-      "Down Dog Shoulder Shrug",
-      "Wall Hollow Body",
-      "Wall Plank Line",
-      "Handstand Wall Walks",
-      "Chest-to-Wall Hold",
-      "Toe Pull Balance",
-      "Freestanding Exit Map",
-    ],
-  },
-  {
-    title: "Splits Prep Flow",
-    subtitle: "Hamstring and hip-flexor range without forcing depth",
-    duration: "25-35 min",
-    intention:
-      "A flexibility flow for building front-line and back-line range with active control.",
-    cues: [
-      "Alternate hip-flexor opening with hamstring work.",
-      "Use blocks to keep the pelvis organized.",
-      "Stay elastic before holding deeper ranges.",
-      "Keep the back leg active in split work.",
-    ],
-    sequence: [
-      "Low Lunge Hip Bounce",
-      "Low Lunge to Pyramid Oscillation",
-      "Half Split Active Hold",
-      "Standing Split Toe Tap",
-      "Supine Hamstring Strap",
-      "Front Split Block Track",
-      "Couch Stretch Line",
-      "Pigeon Supported Range",
-    ],
-  },
-  {
-    title: "Back Opening Flow",
-    subtitle: "Shoulders, front body, and spine extension prep",
-    duration: "20-30 min",
-    intention:
-      "A progressive back-opening flow that starts with shoulder access and builds toward bridge or wheel work.",
-    cues: [
-      "Open the shoulders before asking for a bigger backbend.",
-      "Keep glutes supportive without squeezing the low back.",
-      "Use blocks whenever the breath gets tight.",
-      "Back out if the low back pinches.",
-    ],
-    sequence: [
-      "Puppy Pose Rib Pulse",
-      "Chest Opener Block Support",
-      "Prone Swimmer Sweep",
-      "Locust Back-Line Lift",
-      "Bridge Shoulder Opener",
-      "Camel Breath Lift",
-      "Wheel Prep Blocks",
-      "Supine Twist Reset",
-    ],
-  },
-];
 
 const sectionListEl = document.querySelector("#section-list");
 const poseGridEl = document.querySelector("#pose-grid");
@@ -778,7 +608,6 @@ const builderFlowEl = document.querySelector("#builder-flow");
 const warmupGridEl = document.querySelector("#warmup-grid");
 const selectedWarmupsEl = document.querySelector("#selected-warmups");
 const warmupCountEl = document.querySelector("#warmup-count");
-const flowProgramGridEl = document.querySelector("#flow-program-grid");
 const filterButtons = document.querySelectorAll(".filter-button");
 const printBuilderFlowEl = document.querySelector("#print-builder-flow");
 const clearBuilderFlowEl = document.querySelector("#clear-builder-flow");
@@ -949,12 +778,15 @@ function renderBuilderFlow() {
   if (builderCountEl) {
     builderCountEl.textContent = `${selectedFlow.length} movement${selectedFlow.length === 1 ? "" : "s"} selected`;
   }
+  if (printBuilderFlowEl) {
+    printBuilderFlowEl.disabled = selectedFlow.length === 0;
+    printBuilderFlowEl.textContent = selectedFlow.length ? "Print custom flow" : "Add poses to print";
+  }
 
   if (!selectedFlow.length) {
     const defaultFlow = [
       "Pick a filter above.",
       "Click Add on any movement.",
-      "Load a ready-made flow below if you want a complete template.",
       "Print the custom flow when the order looks good.",
     ];
     builderFlowEl.innerHTML = defaultFlow.map((item) => `<li>${item}</li>`).join("");
@@ -1010,8 +842,8 @@ function renderPrintSheet() {
   if (printSheetTitleEl) printSheetTitleEl.textContent = "Custom Practice Flow";
   if (printSheetMetaEl) {
     printSheetMetaEl.textContent = flow.length
-      ? `${flow.length} movements / Mark Smith Yoga printable practice sheet`
-      : "Add movements to build a printable practice sheet.";
+      ? `${flow.length} movements / Smile Asana practice sheet`
+      : "Add movements to build a practice sheet.";
   }
 
   printSheetSequenceEl.innerHTML = flow.length
@@ -1078,91 +910,6 @@ function renderSelectedWarmups() {
     : "<li>Select 5-7 movements for a complete elastic warm-up.</li>";
 }
 
-function renderPrintableFlows() {
-  if (!flowProgramGridEl) return;
-
-  flowProgramGridEl.innerHTML = printableFlowPrograms
-    .map(
-      (program) => `
-        <article class="flow-program-card">
-          <div class="flow-program-header">
-            <p>${program.duration}</p>
-            <h3>${program.title}</h3>
-            <span>${program.subtitle}</span>
-          </div>
-          <div class="flow-program-body">
-            <div>
-              <strong>Teaching intention</strong>
-              <p>${program.intention}</p>
-            </div>
-            <div>
-              <strong>Key cues</strong>
-              <ul>
-                ${program.cues.map((cue) => `<li>${cue}</li>`).join("")}
-              </ul>
-            </div>
-          </div>
-          <ol class="flow-sequence-list">
-            ${program.sequence
-              .map(
-                (item) => `
-                  <li>
-                    <span class="flow-avatar-slot">
-                      <img src="${getAvatarPath(item)}" alt="" data-fallback-key="${item}" onerror="showAvatarFallback(this)" />
-                      <em hidden>${initials(item)}</em>
-                    </span>
-                    <strong>${item}</strong>
-                  </li>
-                `,
-              )
-              .join("")}
-          </ol>
-          <button class="button primary add-flow-button" type="button" data-flow="${program.title}">Add full flow to builder</button>
-          <button class="button secondary print-flow-button" type="button" data-flow="${program.title}">Print this flow</button>
-        </article>
-      `,
-    )
-    .join("");
-
-  flowProgramGridEl.querySelectorAll(".print-flow-button").forEach((button) => {
-    button.addEventListener("click", () => {
-      const program = printableFlowPrograms.find((item) => item.title === button.dataset.flow);
-      if (!program) return;
-      loadProgramIntoBuilder(program);
-      document.body.classList.add("print-builder");
-      window.print();
-    });
-  });
-
-  flowProgramGridEl.querySelectorAll(".add-flow-button").forEach((button) => {
-    button.addEventListener("click", () => {
-      const program = printableFlowPrograms.find((item) => item.title === button.dataset.flow);
-      if (!program) return;
-      loadProgramIntoBuilder(program);
-      document.querySelector("#sequence-builder")?.scrollIntoView({ behavior: "smooth" });
-    });
-  });
-}
-
-function loadProgramIntoBuilder(program) {
-  selectedFlow.length = 0;
-  program.sequence.forEach((name) => {
-    const match = poses.find((pose) => slugify(pose.originalBase || pose.name) === slugify(name));
-    selectedFlow.push(
-      match || {
-        name,
-        originalBase: name,
-        section: "Flow",
-        area: program.title,
-        level: "Sequence",
-        cue: "Use the printable flow cueing for this movement.",
-        image: getAvatarPath(name),
-      },
-    );
-  });
-  renderBuilderFlow();
-}
-
 function getSectionIndex() {
   const params = new URLSearchParams(window.location.search);
   const requested = Number(params.get("chapter"));
@@ -1176,7 +923,7 @@ function renderSectionPage(index) {
   const section = sections[index];
   if (!titleEl || !descriptionEl || !focusEl || !bestEl || !metaEl) return;
 
-  document.title = `${section.title} | Mark Smith Yoga`;
+  document.title = `${section.title} | Smile Asana`;
   titleEl.textContent = section.title;
   if (summaryEl) summaryEl.textContent = section.summary;
   descriptionEl.textContent = section.description;
@@ -1204,7 +951,7 @@ function renderSectionPage(index) {
   }
 
   if (printableIntroEl && offlinePracticeEl && offlineNotesEl) {
-    printableIntroEl.textContent = `Use this ${section.duration.toLowerCase()} ${section.track.toLowerCase()} sheet as an offline practice map or avatar PDF companion.`;
+    printableIntroEl.textContent = `Use this ${section.duration.toLowerCase()} ${section.track.toLowerCase()} sheet as an offline practice map.`;
     offlinePracticeEl.innerHTML = section.offlinePractice
       .map(
         (item) => `
@@ -1256,6 +1003,7 @@ if (printButtonEl) {
 
 if (printBuilderFlowEl) {
   printBuilderFlowEl.addEventListener("click", () => {
+    if (!selectedFlow.length) return;
     renderPrintSheet();
     document.body.classList.add("print-builder");
     window.print();
@@ -1281,5 +1029,4 @@ renderPoses(activePoseFilter);
 renderBuilderFlow();
 renderWarmups();
 renderSelectedWarmups();
-renderPrintableFlows();
 renderSectionPage(getSectionIndex());

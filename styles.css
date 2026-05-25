@@ -180,6 +180,11 @@ h2 {
   background: transparent;
 }
 
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
 .builder-preview {
   align-self: center;
   background: var(--charcoal);
