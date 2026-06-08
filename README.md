@@ -11,6 +11,7 @@ The reflection copy is original and written for Smile Asana.
 - `styles.css`
 - `app.js`
 - `assets/logo.png`
+- `assets/logo-wide.png`
 - `README.md`
 
 This version removes the old builder, pose library, guides, print page, and image folders.
