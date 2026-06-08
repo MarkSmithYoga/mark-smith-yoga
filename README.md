@@ -1,6 +1,6 @@
-# Smile Asana Wisdom Library
+# Smile Asana Affirm
 
-A minimal white/light wisdom library with short teacher-focused reflection paragraphs.
+A minimal white/light Affirm tab with short teacher-focused reflection paragraphs.
 
 This version uses a Dylan Werner-inspired modern athletic font style.
 The reflection copy is original and written for Smile Asana.

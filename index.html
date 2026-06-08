@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Smile Asana | Wisdom Library</title>
+    <title>Smile Asana | Affirm</title>
     <meta
       name="description"
-      content="Smile Asana Wisdom Library: original reflections for presence, practice, movement, and teaching."
+      content="Smile Asana Affirm: original reflection paragraphs for yoga teachers."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,35 +19,39 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Smile Asana Wisdom Library">
+      <a class="brand" href="#top" aria-label="Smile Asana Affirm">
         <img src="assets/logo-wide.png" alt="Smile Asana" />
       </a>
       <nav class="top-nav" aria-label="Smile Asana navigation">
-        <a href="#library">Library</a>
-        <a href="#reflections">Reflections</a>
+        <a href="#affirm">Affirm</a>
       </nav>
     </header>
 
     <main id="top">
-      <section class="hero">
-        <p class="signal-label">Smile Asana</p>
-        <h1>Teacher reflections for steadier practice.</h1>
-        <p>
-          Small paragraphs for yoga teachers to read before class, after class, or during the
-          quiet moments when confidence, clarity, and direction need a little room to return.
-        </p>
+      <nav class="tab-bar" aria-label="Smile Asana sections">
+        <a class="app-tab is-active" href="#affirm">Affirm</a>
+      </nav>
+
+      <section class="tab-panel" id="affirm" aria-label="Affirm">
+        <section class="hero">
+          <p class="signal-label">Affirm</p>
+          <h1>Teacher reflections for steadier practice.</h1>
+          <p>
+            Small paragraphs for yoga teachers to read before class, after class, or during the
+            quiet moments when confidence, clarity, and direction need a little room to return.
+          </p>
+        </section>
+
+        <section class="filter-section" id="library" aria-label="Affirm filters"></section>
+
+        <section class="featured-card" id="featured-card" aria-live="polite"></section>
+        <section class="affirmation-grid" id="reflections" aria-label="Affirm reflections"></section>
       </section>
-
-      <section class="filter-section" id="library" aria-label="Wisdom library filters"></section>
-
-      <section class="featured-card" id="featured-card" aria-live="polite"></section>
-      <section class="affirmation-grid" id="reflections" aria-label="Smile Asana reflections"></section>
-
     </main>
 
     <footer class="site-footer">
       <span>Smile Asana</span>
-      <span>Wisdom Library</span>
+      <span>Affirm</span>
     </footer>
 
     <script src="app.js"></script>
