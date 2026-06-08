@@ -1,6 +1,6 @@
 # Smile Asana Wisdom Library
 
-A clean white/light wisdom library for yoga teachers, practitioners, and daily reflection.
+A minimal white/light wisdom library with short teacher-focused reflection paragraphs.
 
 This version uses a Dylan Werner-inspired modern athletic font style.
 The reflection copy is original and written for Smile Asana.
