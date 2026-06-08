@@ -1,6 +1,6 @@
-# Smile Asana
+# Smile Asana Teacher Heart
 
-Clean app-style rebuild for Smile Asana.
+A clean white/light affirmation site for yoga teachers.
 
 ## Files
 
@@ -9,15 +9,4 @@ Clean app-style rebuild for Smile Asana.
 - `app.js`
 - `README.md`
 
-## What This Version Does
-
-- Build a custom practice flow.
-- Search and filter a simple movement library.
-- Add, move, remove, and clear movements.
-- Preview and print a practice sheet.
-- Uses no image folders.
-- Uses no old premade flow pages.
-
-## Upload Note
-
-Before uploading this clean version, delete the old website files and folders from GitHub, including old image folders.
+This version removes the old builder, pose library, guides, print page, and image folders.
