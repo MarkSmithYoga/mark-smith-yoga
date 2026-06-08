@@ -6,206 +6,143 @@
     <title>Smile Asana</title>
     <meta
       name="description"
-      content="A modern yoga sequencing and pose library focused on mobility, flexibility, and handstand development."
+      content="Smile Asana is a simple practice builder for yoga, mobility, flexibility, and handstand training."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="Smile Asana home">
-        <span class="brand-mark">SA</span>
-        <span>Smile Asana</span>
-      </a>
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#pose-library">Pose Library</a>
-        <a href="#sequence-builder">Builder</a>
-        <a href="asana-guide.html">Asana Guide</a>
-        <a href="surya-namaskar-a.html">Sun A Guide</a>
-        <a href="#sections">Sections</a>
-      </nav>
-    </header>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Smile Asana navigation">
+        <a class="brand" href="#build" data-route="build" aria-label="Smile Asana home">
+          <span>SA</span>
+          <strong>Smile Asana</strong>
+        </a>
+        <nav class="nav-list" aria-label="Primary">
+          <button class="nav-button is-active" type="button" data-route="build">Build</button>
+          <button class="nav-button" type="button" data-route="library">Library</button>
+          <button class="nav-button" type="button" data-route="guides">Guides</button>
+          <button class="nav-button" type="button" data-route="teacher-heart">Teacher Heart</button>
+          <button class="nav-button" type="button" data-route="print">Print</button>
+        </nav>
+      </aside>
 
-    <main id="top">
-      <section class="hero planner-hero" aria-labelledby="hero-title">
-        <div class="hero-content">
-          <p class="eyebrow">Custom practice builder</p>
-          <h1 id="hero-title">Build flexible bodies and stronger handstands.</h1>
-          <p class="hero-copy">
-            Pick movements, build a custom mobility or yoga flow, and print a clean
-            practice sheet for offline training.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#pose-library">Start building</a>
-            <a class="button secondary" href="#sequence-builder">Print custom flow</a>
-            <a class="button secondary" href="asana-guide.html">Asana guide</a>
-            <a class="button secondary" href="surya-namaskar-a.html">Sun A guide</a>
+      <main class="app-main">
+        <section class="app-view is-active" id="build" aria-labelledby="build-title">
+          <div class="view-header">
+            <p class="eyebrow">Custom practice builder</p>
+            <h1 id="build-title">Build a clean practice flow.</h1>
+            <p>
+              Pick movements from the library, arrange the order, and print a simple offline
+              practice sheet.
+            </p>
           </div>
-        </div>
-        <div class="builder-preview" aria-label="Sequence preview">
-          <div class="preview-header">
-            <span>Today&apos;s build</span>
-            <strong>Handstand line prep</strong>
-          </div>
-          <div class="mini-flow">
-            <span>Wrist prep</span>
-            <span>Scapular plank</span>
-            <span>Wall line</span>
-            <span>Tuck entry</span>
-            <span>Exit drill</span>
-          </div>
-          <div class="preview-footer">
-            <span>Custom sheet ready</span>
-            <span>5 poses</span>
-          </div>
-        </div>
-      </section>
 
-      <section class="stats-band" aria-label="Program highlights">
-        <div>
-          <strong>01</strong>
-          <span>choose a filter</span>
-        </div>
-        <div>
-          <strong>02</strong>
-          <span>add movements</span>
-        </div>
-        <div>
-          <strong>03</strong>
-          <span>print the flow</span>
-        </div>
-      </section>
-
-      <section class="section intro" aria-labelledby="about-title">
-        <div>
-          <p class="eyebrow">Offline-first practice</p>
-          <h2 id="about-title">A simple flow builder for practice sheets.</h2>
-        </div>
-        <p>
-          Choose a category, add the movements you want, arrange the order, and print a
-          simple practice sheet without needing a video or app open.
-        </p>
-      </section>
-
-      <section class="section" id="sections" aria-labelledby="sections-title">
-        <div class="section-heading">
-          <p class="eyebrow">Core sections</p>
-          <h2 id="sections-title">Choose your training lane</h2>
-        </div>
-        <div class="section-grid" id="section-list"></div>
-      </section>
-
-      <section class="section library-section" id="pose-library" aria-labelledby="library-title">
-        <div class="section-heading">
-          <p class="eyebrow">Step 1 / Pose selection</p>
-          <h2 id="library-title">Pick a category, then add movements to your flow.</h2>
-          <p>
-            Start with one focused group. You can search by name, body area, handstand,
-            wrist, splits, backbend, or arm balance.
-          </p>
-        </div>
-
-        <div class="library-tools">
-          <label class="search-field" for="pose-search">
-            <span>Search poses</span>
-            <input id="pose-search" type="search" placeholder="Try wrist, handstand, splits, crow..." />
-          </label>
-        </div>
-
-        <div class="filter-bar" aria-label="Pose filters">
-          <button class="filter-button is-active" type="button" data-filter="Starter">Starter</button>
-          <button class="filter-button" type="button" data-filter="Wrist Prep">Wrist</button>
-          <button class="filter-button" type="button" data-filter="Handstand Line">Handstand line</button>
-          <button class="filter-button" type="button" data-filter="Handstand Entries">Entries</button>
-          <button class="filter-button" type="button" data-filter="Press + Compression">Press + core</button>
-          <button class="filter-button" type="button" data-filter="Arm Balance">Arm balance</button>
-          <button class="filter-button" type="button" data-filter="Hip Mobility">Hips</button>
-          <button class="filter-button" type="button" data-filter="Splits + Hamstrings">Splits</button>
-          <button class="filter-button" type="button" data-filter="Backbends">Backbends</button>
-          <button class="filter-button" type="button" data-filter="All">All</button>
-        </div>
-
-        <div class="pose-grid" id="pose-grid"></div>
-      </section>
-
-      <section class="section builder-section" id="sequence-builder" aria-labelledby="builder-title">
-        <div class="section-heading">
-          <p class="eyebrow">Step 2 / Build your custom flow</p>
-          <h2 id="builder-title">Arrange the movements, then print a clean practice sheet.</h2>
-          <p>
-            Add poses from the library, move them up or down, remove what you do not want,
-            then print your custom practice sheet.
-          </p>
-        </div>
-        <div class="builder-layout">
-          <div class="builder-column">
-            <div class="builder-heading">
-              <div>
-                <h3>Your custom flow</h3>
-                <span id="builder-count">0 movements selected</span>
+          <div class="builder-grid">
+            <section class="panel" aria-labelledby="quick-add-title">
+              <div class="panel-header">
+                <div>
+                  <p class="eyebrow">Step 1</p>
+                  <h2 id="quick-add-title">Choose a focus</h2>
+                </div>
               </div>
-              <button class="text-button" id="clear-builder-flow" type="button">Clear</button>
+              <div class="focus-grid" id="focus-grid"></div>
+            </section>
+
+            <section class="panel flow-panel" aria-labelledby="flow-title">
+              <div class="panel-header">
+                <div>
+                  <p class="eyebrow">Step 2</p>
+                  <h2 id="flow-title">Your flow</h2>
+                  <span id="flow-count">0 movements selected</span>
+                </div>
+                <button class="text-button" id="clear-flow" type="button">Clear</button>
+              </div>
+              <ol class="selected-flow" id="selected-flow"></ol>
+              <div class="panel-actions">
+                <button class="primary-action" id="go-print" type="button" disabled>Print flow</button>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section class="app-view" id="library" aria-labelledby="library-title">
+          <div class="view-header">
+            <p class="eyebrow">Pose library</p>
+            <h1 id="library-title">Search focused movement options.</h1>
+            <p>Use plain-language categories so building a practice feels fast instead of crowded.</p>
+          </div>
+          <div class="toolbar">
+            <label class="search-field" for="pose-search">
+              <span>Search</span>
+              <input id="pose-search" type="search" placeholder="Try wrist, handstand, splits, crow..." />
+            </label>
+            <div class="chip-row" id="category-filters" aria-label="Category filters"></div>
+          </div>
+          <div class="library-grid" id="library-grid"></div>
+        </section>
+
+        <section class="app-view" id="guides" aria-labelledby="guides-title">
+          <div class="view-header">
+            <p class="eyebrow">Learning guides</p>
+            <h1 id="guides-title">Short references for smarter practice.</h1>
+            <p>Clean notes for common practice patterns. No videos required.</p>
+          </div>
+          <div class="guide-grid" id="guide-grid"></div>
+        </section>
+
+        <section class="app-view teacher-heart-view" id="teacher-heart" aria-labelledby="teacher-heart-title">
+          <div class="teacher-hero">
+            <p class="signal-label">Teacher Heart / Carry this into the room</p>
+            <h1 id="teacher-heart-title">A steadier place to teach from.</h1>
+            <p>
+              Short reflections for yoga teachers who feel doubt, comparison, or the quiet
+              pressure to perform. Read one before class and let it soften the nervous system.
+            </p>
+          </div>
+
+          <div class="affirmation-toolbar">
+            <button class="teacher-chip is-active" type="button" data-affirmation-filter="All">All</button>
+            <button class="teacher-chip" type="button" data-affirmation-filter="Before Class">Before Class</button>
+            <button class="teacher-chip" type="button" data-affirmation-filter="Imposter Syndrome">Imposter Syndrome</button>
+            <button class="teacher-chip" type="button" data-affirmation-filter="Comparison">Comparison</button>
+            <button class="teacher-chip" type="button" data-affirmation-filter="After Class">After Class</button>
+          </div>
+
+          <div class="affirmation-feature" id="affirmation-feature"></div>
+          <div class="affirmation-grid" id="affirmation-grid"></div>
+        </section>
+
+        <section class="app-view" id="print" aria-labelledby="print-title">
+          <div class="view-header">
+            <p class="eyebrow">Practice sheet</p>
+            <h1 id="print-title">Preview before printing.</h1>
+            <p>The sheet below only includes the movements you selected.</p>
+          </div>
+          <section class="print-sheet" id="print-sheet">
+            <div class="sheet-header">
+              <p>Smile Asana</p>
+              <h2>Custom Practice Flow</h2>
+              <span id="sheet-meta">Add movements to build your sheet.</span>
             </div>
-            <ol id="builder-flow"></ol>
-            <button class="button primary builder-print-button" id="print-builder-flow" type="button" disabled>Print custom flow</button>
+            <ol id="sheet-list"></ol>
+            <div class="sheet-notes">
+              <strong>Practice notes</strong>
+              <p>Move with clean breath, stop before form breaks, and keep each position repeatable.</p>
+            </div>
+          </section>
+          <div class="panel-actions">
+            <button class="primary-action" id="print-flow" type="button" disabled>Print practice sheet</button>
           </div>
-          <div class="builder-column dark">
-            <h3>Simple workflow</h3>
-            <ul>
-              <li>Pick one category above.</li>
-              <li>Add 5-12 movements.</li>
-              <li>Use move buttons to organize the order.</li>
-              <li>Print the custom flow as an offline PDF.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+        </section>
+      </main>
+    </div>
 
-      <section class="print-sheet" id="print-sheet" aria-label="Printable custom flow">
-        <div class="print-sheet-header">
-          <p>Smile Asana</p>
-          <h2 id="print-sheet-title">Custom Practice Flow</h2>
-          <span id="print-sheet-meta">Build, breathe, practice.</span>
-        </div>
-        <ol id="print-sheet-sequence"></ol>
-        <div class="print-sheet-notes">
-          <strong>Practice notes</strong>
-          <p>Move with clean breath, stop before form breaks, and keep each position repeatable.</p>
-        </div>
-      </section>
-
-      <section class="section warmup-section" id="elastic-warmups" aria-labelledby="warmup-title">
-        <div class="section-heading">
-          <p class="eyebrow">Elasticity warm-up lab</p>
-          <h2 id="warmup-title">Pick 5-7 low-impact movements before handstand work.</h2>
-          <p>
-            These options use gentle oscillation, reciprocal loading, and viscoelastic tissue
-            prep so the shoulders, wrists, spine, hips, and hamstrings feel springy without
-            being overworked.
-          </p>
-        </div>
-        <div class="warmup-layout">
-          <div class="warmup-grid" id="warmup-grid"></div>
-          <aside class="selected-panel">
-            <p class="eyebrow">Selected warm-up</p>
-            <h3 id="warmup-count">0 selected</h3>
-            <ol id="selected-warmups"></ol>
-          </aside>
-        </div>
-      </section>
-
-    </main>
-
-    <footer class="site-footer">
-      <span>Smile Asana</span>
-      <span>Pose library, custom flow builder, and offline practice sheets.</span>
-    </footer>
-
-    <script src="script.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>

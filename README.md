@@ -1,34 +1,23 @@
-# Smile Asana Website
+# Smile Asana
 
-Open `index.html` in a browser to preview the site.
+Clean app-style rebuild for Smile Asana.
 
-The site is organized into three sections:
+## Files
 
-- Vinyasa Based Mobility Flows
-- Handstand Specific Development
-- Flexibility Focused Range of Motion
+- `index.html`
+- `styles.css`
+- `app.js`
+- `README.md`
 
-This version is built around pose selection, Practice sheet packets, printable practice
-sheets, flexibility education, and handstand development.
+## What This Version Does
 
-To change the sections, edit the `sections` list in `script.js`.
+- Build a custom practice flow.
+- Search and filter a simple movement library.
+- Add, move, remove, and clear movements.
+- Preview and print a practice sheet.
+- Uses no image folders.
+- Uses no old premade flow pages.
 
-Each section supports:
+## Upload Note
 
-- `title`
-- `level`
-- `duration`
-- `track`
-- `summary`
-- `description`
-- `focus`
-- `bestFor`
-- `avatarTitle`
-- `guide`
-- `offlinePractice`
-- `offlineNotes`
-
-To change the pose library, edit the `poses` list in `script.js`.
-
-On each section page, the `Print / Save PDF` button opens the browser print dialog.
-Choose a printer for paper copies or choose "Save as PDF" to create an offline guide.
+Before uploading this clean version, delete the old website files and folders from GitHub, including old image folders.
