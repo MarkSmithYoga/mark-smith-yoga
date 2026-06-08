@@ -53,22 +53,17 @@ button {
 .brand {
   align-items: center;
   display: flex;
-  gap: 12px;
+  min-width: 128px;
 }
 
-.brand span {
-  align-items: center;
-  background: #111316;
-  color: #ffffff;
-  display: inline-flex;
-  font-size: 0.75rem;
-  font-weight: 700;
-  height: 38px;
-  justify-content: center;
-  width: 38px;
+.brand img {
+  display: block;
+  height: 42px;
+  object-fit: contain;
+  object-position: left center;
+  width: 150px;
 }
 
-.brand strong,
 .top-nav,
 .signal-label,
 .teacher-chip,
