@@ -1,93 +1,200 @@
-const affirmations = [
+const libraryItems = [
   {
-    title: "Start With Intention",
-    category: "Before Class",
+    title: "The Step You Are On",
+    category: "The SmileAsana Collection",
     text:
-      "Creating space for an intention is all that is necessary for a clear direction to start to take form in your life. Begin with one honest sentence, one steady breath, and let the rest organize around that clarity.",
+      "The path reveals itself to those willing to fully walk the step they are on.",
+  },
+  {
+    title: "Clear Direction",
+    category: "Presence",
+    text:
+      "Creating space for an intention is all that is necessary for a clear direction to start to take form in your life. Begin with one honest point of attention, then let the rest organize around it.",
   },
   {
     title: "Contentment Practice",
-    category: "Before Class",
+    category: "Stillness",
     text:
-      "Contentment is a state that asks us to be present without reaching for anything other than what we have, and without becoming anyone other than who we are. From that place, teaching can feel less like proving and more like offering.",
+      "Contentment is a state that asks us to be present without reaching for anything other than what we have, and without becoming anyone other than who we are.",
   },
   {
-    title: "Arrive As Yourself",
-    category: "Before Class",
+    title: "Return To Breath",
+    category: "Breath",
     text:
-      "You do not need to become louder, softer, wiser, or more impressive before you teach. Let your feet feel the floor, let the breath settle, and let your real presence be the first thing you offer the room.",
+      "The breath is always waiting for your return. It does not punish your distraction. It simply gives you another doorway back into center.",
   },
   {
-    title: "When Doubt Gets Loud",
-    category: "Imposter Syndrome",
+    title: "Invisible Consistency",
+    category: "Discipline",
     text:
-      "Doubt can be present without being in charge. You are allowed to teach from what you have practiced, what you have studied, and what you are still learning. Let sincerity be stronger than the need to appear certain.",
+      "Consistency is invisible until it becomes undeniable. What feels small today becomes structure when you repeat it with care.",
   },
   {
-    title: "The Small Room",
-    category: "Before Class",
+    title: "Body And Awareness",
+    category: "Movement",
     text:
-      "A quiet room is still a room worth serving. Teach to the people who arrived, not to the number you imagined. Care does not become smaller because the class is small.",
+      "The body bends; awareness expands. Movement becomes practice when attention is present enough to learn from sensation.",
   },
   {
-    title: "Your Own Pace",
-    category: "Comparison",
+    title: "Curious Courage",
+    category: "Courage",
     text:
-      "Another teacher's path does not reduce the value of yours. Their voice, body, audience, or timing is not evidence against you. Keep returning to the work that is yours to refine.",
+      "Courage is not the absence of fear. It is the willingness to meet fear with curiosity, breath, and one grounded action.",
   },
   {
-    title: "Repair Is Teaching",
-    category: "After Class",
+    title: "After The Setback",
+    category: "Resilience",
     text:
-      "If you lose your words or forget a side, you can pause, breathe, and return. Students do not need a flawless performance. They often learn more from watching someone recover with steadiness.",
+      "A setback does not erase your practice. It gives your practice somewhere honest to go. Begin again without making the pause mean failure.",
   },
   {
-    title: "Clear Is Enough",
-    category: "Imposter Syndrome",
+    title: "Effort And Ease",
+    category: "Balance",
     text:
-      "You do not have to make the class complex to make it meaningful. A clear cue, a grounded pace, and a steady tone can carry more than a room full of extra words.",
+      "Balance is not half effort and half ease. It is the intelligence to know which one the moment is asking for.",
   },
   {
-    title: "After A Rough Class",
-    category: "After Class",
+    title: "Repetition Becomes Progress",
+    category: "Growth",
     text:
-      "One difficult class is not a verdict on your teaching. Take the lesson without turning it into an identity. You are allowed to adjust, learn, and come back with more softness.",
+      "Progress is often disguised as repetition. The work changes you before it becomes obvious to anyone else.",
   },
   {
-    title: "Student And Teacher",
-    category: "Imposter Syndrome",
+    title: "Rest Belongs",
+    category: "Recovery",
     text:
-      "Being unfinished does not make you unqualified to help. It can keep you curious, careful, and awake. You can respect your own growth while still offering what you know now.",
+      "Recovery is not outside the practice. Rest teaches the nervous system that strength does not have to be built through constant force.",
   },
   {
-    title: "Let Silence Work",
-    category: "Before Class",
+    title: "Attention Leads",
+    category: "Focus",
     text:
-      "Silence is not always distance. Sometimes people are listening inwardly. Sometimes the practice is doing quiet work. You do not have to fill every space to prove the class is alive.",
+      "Strength grows where attention goes. Choose one thing clearly enough, and the body begins to understand where to organize itself.",
   },
   {
-    title: "The Part You Do Not See",
-    category: "After Class",
+    title: "Upside Down Lessons",
+    category: "Handstand Wisdom",
     text:
-      "You may not know which breath helped someone, which cue stayed with them, or which moment gave them relief. Let the impact exist beyond what you can measure.",
+      "Handstand teaches the whole body to listen at once. The lesson is not only balance; it is patience under pressure.",
+  },
+  {
+    title: "The Honest Room",
+    category: "The Teacher's Notebook",
+    text:
+      "A teacher does not need to perform certainty. The room needs steadiness, clarity, and a human being willing to stay present.",
+  },
+  {
+    title: "Daily Reflection",
+    category: "Daily Reflection",
+    text:
+      "The next chapter begins with wholehearted participation in this one.",
+  },
+  {
+    title: "Modern Eight Limbs",
+    category: "The Eight Limbs",
+    text:
+      "The classical path becomes modern when it changes how you breathe, choose, speak, rest, move, and relate to the life directly in front of you.",
+  },
+  {
+    title: "Question The Pattern",
+    category: "Self-Inquiry",
+    text:
+      "What you seek often waits inside what you avoid. Self-inquiry begins when you can look without immediately turning away.",
+  },
+  {
+    title: "Quiet Fortitude",
+    category: "Inner Strength",
+    text:
+      "Inner strength is not always intensity. Sometimes it is the quiet decision to remain kind, clear, and available when old patterns ask you to close.",
+  },
+  {
+    title: "No Resistance",
+    category: "Stillness",
+    text:
+      "Stillness is not the absence of movement but the absence of resistance.",
+  },
+  {
+    title: "Freedom Through Engagement",
+    category: "Freedom",
+    text:
+      "Freedom is found in complete engagement with what is. The more honestly you meet the moment, the less energy you spend escaping it.",
+  },
+  {
+    title: "Practice Fingerprints",
+    category: "Practice Notes",
+    text:
+      "Every practice leaves a fingerprint on the mind. The shape may end, but the way you met it keeps teaching.",
+  },
+  {
+    title: "Participation Over Perfection",
+    category: "The SmileAsana Collection",
+    text:
+      "The practice never asks for perfection, only participation.",
+  },
+  {
+    title: "Available To Yourself",
+    category: "Presence",
+    text:
+      "The practice is not becoming someone else. It is becoming available to yourself with fewer conditions.",
+  },
+  {
+    title: "Rise Through Understanding",
+    category: "Movement",
+    text:
+      "We do not rise through force; we rise through understanding. Strength becomes more useful when it is guided by awareness.",
+  },
+  {
+    title: "Remembering Possibility",
+    category: "Growth",
+    text:
+      "Becoming is simply remembering what was always possible, then practicing until the body believes it too.",
   },
 ];
 
 let activeFilter = "All";
 
 const featuredCard = document.querySelector("#featured-card");
-const affirmationGrid = document.querySelector("#affirmation-grid");
-const filterButtons = document.querySelectorAll("[data-filter]");
+const affirmationGrid = document.querySelector("#reflections");
+const filterSection = document.querySelector("#library");
 
-function visibleAffirmations() {
+function categories() {
+  return ["All", ...new Set(libraryItems.map((item) => item.category))];
+}
+
+function visibleItems() {
   return activeFilter === "All"
-    ? affirmations
-    : affirmations.filter((affirmation) => affirmation.category === activeFilter);
+    ? libraryItems
+    : libraryItems.filter((item) => item.category === activeFilter);
+}
+
+function renderFilters() {
+  filterSection.innerHTML = categories()
+    .map(
+      (category) => `
+        <button
+          class="teacher-chip${category === activeFilter ? " is-active" : ""}"
+          type="button"
+          data-filter="${category}"
+        >
+          ${category}
+        </button>
+      `,
+    )
+    .join("");
+
+  filterSection.querySelectorAll("[data-filter]").forEach((button) => {
+    button.addEventListener("click", () => {
+      activeFilter = button.dataset.filter;
+      render();
+    });
+  });
 }
 
 function render() {
-  const visible = visibleAffirmations();
-  const feature = visible[0] || affirmations[0];
+  const visible = visibleItems();
+  const feature = visible[0] || libraryItems[0];
+
+  renderFilters();
 
   featuredCard.innerHTML = `
     <span>${feature.category}</span>
@@ -97,23 +204,15 @@ function render() {
 
   affirmationGrid.innerHTML = visible
     .map(
-      (affirmation) => `
+      (item) => `
         <article class="affirmation-card">
-          <span>${affirmation.category}</span>
-          <h3>${affirmation.title}</h3>
-          <p>${affirmation.text}</p>
+          <span>${item.category}</span>
+          <h3>${item.title}</h3>
+          <p>${item.text}</p>
         </article>
       `,
     )
     .join("");
 }
-
-filterButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    activeFilter = button.dataset.filter;
-    filterButtons.forEach((item) => item.classList.toggle("is-active", item === button));
-    render();
-  });
-});
 
 render();

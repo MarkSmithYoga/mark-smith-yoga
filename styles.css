@@ -127,7 +127,7 @@ h1 {
 .filter-section {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
   margin-bottom: 22px;
 }
 
@@ -136,7 +136,8 @@ h1 {
   border: 1px solid var(--line);
   color: #22272d;
   cursor: pointer;
-  padding: 11px 14px;
+  min-height: 42px;
+  padding: 10px 13px;
 }
 
 .teacher-chip.is-active,
@@ -187,7 +188,7 @@ h1 {
 .affirmation-card {
   background: rgba(255, 255, 255, 0.86);
   border: 1px solid var(--line);
-  min-height: 250px;
+  min-height: 238px;
   padding: clamp(20px, 3vw, 34px);
 }
 

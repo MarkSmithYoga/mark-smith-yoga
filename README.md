@@ -1,9 +1,9 @@
-# Smile Asana Teacher Heart
+# Smile Asana Wisdom Library
 
-A clean white/light affirmation site for yoga teachers.
+A clean white/light wisdom library for yoga teachers, practitioners, and daily reflection.
 
 This version uses a Dylan Werner-inspired modern athletic font style.
-The affirmation copy is original and written for Smile Asana.
+The reflection copy is original and written for Smile Asana.
 
 ## Files
 
