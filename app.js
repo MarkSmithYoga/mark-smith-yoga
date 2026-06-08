@@ -1,63 +1,75 @@
 const affirmations = [
   {
-    title: "Before You Walk In",
+    title: "Start With Intention",
     category: "Before Class",
     text:
-      "You do not have to become someone else to hold the room. Let your breath arrive first, let your voice be simple, and let the practice be enough. The students do not need a performance. They need your honest presence.",
+      "Creating space for an intention is all that is necessary for a clear direction to start to take form in your life. Begin with one honest sentence, one steady breath, and let the rest organize around that clarity.",
   },
   {
-    title: "When You Feel Like A Fraud",
+    title: "Contentment Practice",
+    category: "Before Class",
+    text:
+      "Contentment is a state that asks us to be present without reaching for anything other than what we have, and without becoming anyone other than who we are. From that place, teaching can feel less like proving and more like offering.",
+  },
+  {
+    title: "Arrive As Yourself",
+    category: "Before Class",
+    text:
+      "You do not need to become louder, softer, wiser, or more impressive before you teach. Let your feet feel the floor, let the breath settle, and let your real presence be the first thing you offer the room.",
+  },
+  {
+    title: "When Doubt Gets Loud",
     category: "Imposter Syndrome",
     text:
-      "You are not here because you know everything. You are here because you have practiced enough to offer something real. Doubt can ride with you without driving the class. Teach what you know. Stay close to the breath. Let honesty be part of your authority.",
+      "Doubt can be present without being in charge. You are allowed to teach from what you have practiced, what you have studied, and what you are still learning. Let sincerity be stronger than the need to appear certain.",
   },
   {
-    title: "Small Class Reset",
+    title: "The Small Room",
     category: "Before Class",
     text:
-      "A small class is not a failed class. It is a room of people who still chose to arrive. Do not teach to the empty spaces. Teach to the breathing bodies in front of you, with the same care you would offer a full room.",
+      "A quiet room is still a room worth serving. Teach to the people who arrived, not to the number you imagined. Care does not become smaller because the class is small.",
   },
   {
-    title: "When You Compare Yourself",
+    title: "Your Own Pace",
     category: "Comparison",
     text:
-      "Someone else's confidence does not make your voice less needed. Someone else's flexibility does not erase your wisdom. Someone else's following does not measure your impact. Return to your students. Return to the work.",
+      "Another teacher's path does not reduce the value of yours. Their voice, body, audience, or timing is not evidence against you. Keep returning to the work that is yours to refine.",
   },
   {
-    title: "When You Mess Up",
+    title: "Repair Is Teaching",
     category: "After Class",
     text:
-      "You are allowed to lose your words, forget a side, laugh softly, breathe, and begin again. A human teacher gives students permission to be human too. The class does not have to be flawless to be useful.",
+      "If you lose your words or forget a side, you can pause, breathe, and return. Students do not need a flawless performance. They often learn more from watching someone recover with steadiness.",
   },
   {
-    title: "Presence Over Proof",
+    title: "Clear Is Enough",
     category: "Imposter Syndrome",
     text:
-      "You do not have to prove you belong by making the class more complicated. Clear is enough. Warm is enough. Steady is enough. Teach the next breath, the next shape, the next honest cue.",
+      "You do not have to make the class complex to make it meaningful. A clear cue, a grounded pace, and a steady tone can carry more than a room full of extra words.",
   },
   {
-    title: "After A Hard Class",
+    title: "After A Rough Class",
     category: "After Class",
     text:
-      "One hard class is not your whole teaching path. Let the lesson come through without turning it into a story about your worth. Some rooms are awkward. Some days are tender. You still get to grow.",
+      "One difficult class is not a verdict on your teaching. Take the lesson without turning it into an identity. You are allowed to adjust, learn, and come back with more softness.",
   },
   {
-    title: "Still Learning",
+    title: "Student And Teacher",
     category: "Imposter Syndrome",
     text:
-      "Being unfinished does not disqualify you. It keeps you listening. Let your learning make you kinder, clearer, and less attached to pretending. You can be both a student and a teacher in the same breath.",
+      "Being unfinished does not make you unqualified to help. It can keep you curious, careful, and awake. You can respect your own growth while still offering what you know now.",
   },
   {
-    title: "When The Room Is Quiet",
+    title: "Let Silence Work",
     category: "Before Class",
     text:
-      "Silence does not mean you are failing. Sometimes the room is listening. Sometimes the practice is landing somewhere private. Let the quiet be spacious instead of threatening.",
+      "Silence is not always distance. Sometimes people are listening inwardly. Sometimes the practice is doing quiet work. You do not have to fill every space to prove the class is alive.",
   },
   {
-    title: "After They Leave",
+    title: "The Part You Do Not See",
     category: "After Class",
     text:
-      "You may never know which cue helped, which breath mattered, or which student needed the exact class you taught. Release the need to measure the impact immediately. Some teaching blooms later.",
+      "You may not know which breath helped someone, which cue stayed with them, or which moment gave them relief. Let the impact exist beyond what you can measure.",
   },
 ];
 

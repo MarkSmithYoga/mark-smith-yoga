@@ -3,6 +3,7 @@
 A clean white/light affirmation site for yoga teachers.
 
 This version uses a Dylan Werner-inspired modern athletic font style.
+The affirmation copy is original and written for Smile Asana.
 
 ## Files
 
