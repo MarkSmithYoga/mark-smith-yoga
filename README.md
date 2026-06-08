@@ -2,6 +2,8 @@
 
 A clean white/light affirmation site for yoga teachers.
 
+This version uses a Dylan Werner-inspired modern athletic font style.
+
 ## Files
 
 - `index.html`
