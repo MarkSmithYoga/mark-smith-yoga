@@ -1,0 +1,26 @@
+Smile Asana — GitHub upload instructions
+
+1. Open PowerShell.
+2. Copy and paste the commands below.
+3. Replace YOUR_GITHUB_EMAIL@example.com with the email address connected to GitHub.
+
+cd "C:\Users\mrkas\OneDrive\Documents\Smileasana"
+
+@'
+assets/IMG_1255.MOV
+assets/intro-video.mp4
+'@ | Set-Content -Encoding utf8 .gitignore
+
+git config user.name "Mark Smith"
+git config user.email "YOUR_GITHUB_EMAIL@example.com"
+
+git remote set-url origin "https://github.com/MarkSmithYoga/mark-smith-yoga.git"
+git switch -c smileasana
+git add .
+git commit -m "Create Smile Asana coming-soon site"
+git push -u origin smileasana
+
+After the push finishes, view the uploaded files at:
+https://github.com/MarkSmithYoga/mark-smith-yoga/tree/smileasana
+
+Important: IMG_1255.MOV is about 155 MB and GitHub does not accept regular files over 100 MB. It is excluded from the upload for now.

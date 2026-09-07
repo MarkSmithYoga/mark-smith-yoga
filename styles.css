@@ -1,0 +1,191 @@
+:root {
+  --bg: #0b0e0d;
+  --ink: #f4f2eb;
+  --text: #d0d5cd;
+  --muted: #9da9a0;
+  --accent: #b5d772;
+  --line: rgba(232, 238, 228, 0.18);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background:
+    radial-gradient(circle at 72% 10%, rgba(87, 123, 76, 0.24), transparent 28rem),
+    radial-gradient(circle at 10% 90%, rgba(42, 67, 46, 0.28), transparent 26rem),
+    linear-gradient(145deg, #0d1210, var(--bg) 60%);
+  color: var(--ink);
+  font-family: "Rajdhani", system-ui, sans-serif;
+  margin: 0;
+}
+
+.coming-soon {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100svh;
+  padding: 28px;
+}
+
+.coming-soon__content { max-width: 660px; text-align: center; }
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  margin: 0 0 18px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(3.2rem, 9vw, 6.7rem);
+  font-weight: 600;
+  letter-spacing: -0.055em;
+  line-height: 0.9;
+  margin: 0;
+}
+
+.intro {
+  color: var(--text);
+  font-size: clamp(1.08rem, 2vw, 1.3rem);
+  line-height: 1.6;
+  margin: 27px auto 30px;
+  max-width: 530px;
+}
+
+.lesson-link {
+  border-bottom: 1px solid var(--accent);
+  color: var(--accent);
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding-bottom: 7px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.lesson-link:hover { color: #cae78c; }
+
+.video-space {
+  align-items: center;
+  aspect-ratio: 16 / 8;
+  background:
+    radial-gradient(ellipse at 50% 8%, rgba(181, 215, 114, 0.2), transparent 46%),
+    rgba(5, 8, 6, 0.42);
+  border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 52px 0;
+}
+
+.video-space span {
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.video-space p { color: var(--muted); margin: 10px 0 0; }
+
+.contact,
+.updates {
+  border-top: 1px solid var(--line);
+  padding-top: 38px;
+  text-align: left;
+}
+
+.updates { margin-top: 52px; text-align: center; }
+
+h2 {
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin: 0 0 14px;
+}
+
+.contact > p:not(.eyebrow) { color: var(--text); line-height: 1.6; margin-bottom: 25px; }
+
+.contact-form {
+  display: grid;
+  gap: 9px;
+  max-width: 560px;
+}
+
+.contact-form label { color: var(--text); font-size: 0.82rem; font-weight: 600; letter-spacing: 0.06em; margin-top: 8px; text-transform: uppercase; }
+
+.email-form { margin: 0 auto; max-width: 520px; }
+.email-form__fields { display: flex; gap: 10px; }
+
+input, textarea, button { border-radius: 0; font: inherit; }
+
+input {
+  background: rgba(5, 8, 6, 0.46);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  flex: 1;
+  min-height: 50px;
+  outline: none;
+  padding: 0 15px;
+}
+
+textarea {
+  background: rgba(5, 8, 6, 0.46);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  outline: none;
+  padding: 12px 15px;
+  resize: vertical;
+}
+
+input::placeholder { color: var(--muted); }
+input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(181, 215, 114, 0.14); }
+textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(181, 215, 114, 0.14); }
+
+button {
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  color: #10140e;
+  cursor: pointer;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  min-height: 50px;
+  padding: 0 20px;
+  text-transform: uppercase;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+button:hover { background: #cae78c; transform: translateY(-2px); }
+
+.form-note {
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.4;
+  margin: 12px 0 0;
+}
+
+.form-note.is-success { color: var(--accent); }
+
+
+.sr-only {
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+@media (max-width: 500px) {
+  .coming-soon { padding: 22px; }
+  .email-form__fields { flex-direction: column; }
+  button { width: 100%; }
+  .video-space { margin: 40px 0; }
+}

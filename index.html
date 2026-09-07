@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smile Asana | Coming soon</title>
+    <meta name="description" content="Smile Asana private lessons and the Playbook are coming soon." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="coming-soon" aria-labelledby="page-title">
+      <div class="coming-soon__content">
+        <p class="eyebrow">Smile Asana</p>
+        <h1 id="page-title">Practice with intention.</h1>
+        <p class="intro">Private lessons are now available. The Smile Asana Playbook is coming soon.</p>
+        <a class="lesson-link" href="#contact">Request a private lesson <span aria-hidden="true">↓</span></a>
+
+        <section class="video-space" aria-label="Smile Asana introduction video coming soon">
+          <span>Intro video</span>
+          <p>Coming soon.</p>
+        </section>
+
+        <section class="contact" id="contact" aria-labelledby="contact-title">
+          <p class="eyebrow">Private lessons</p>
+          <h2 id="contact-title">Let’s practice together.</h2>
+          <p>Tell me a little about what you would like to work on and I’ll be in touch.</p>
+          <form class="contact-form" id="contact-form">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+            <label for="contact-email">Email address</label>
+            <input id="contact-email" name="email" type="email" autocomplete="email" required />
+            <label for="message">What would you like to work on?</label>
+            <textarea id="message" name="message" rows="4" placeholder="Your goals, experience, or questions" required></textarea>
+            <button type="submit">Send lesson request</button>
+            <p class="form-note" id="contact-note">I’ll respond with availability and next steps.</p>
+          </form>
+        </section>
+
+        <section class="updates" aria-labelledby="updates-title">
+          <p class="eyebrow">Playbook updates</p>
+          <h2 id="updates-title">Stay in the loop.</h2>
+        <form class="email-form" id="email-form">
+          <label class="sr-only" for="email">Email address</label>
+          <div class="email-form__fields">
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="Your email address" required />
+            <button type="submit">Sign up</button>
+          </div>
+          <p class="form-note" id="form-note">Updates for private lessons and the Playbook launch.</p>
+        </form>
+        </section>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
