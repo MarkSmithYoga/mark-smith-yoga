@@ -3,57 +3,56 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Smile Asana | Affirm</title>
-    <meta
-      name="description"
-      content="Smile Asana Affirm: original reflection paragraphs for yoga teachers."
-    />
+    <title>Smile Asana | Coming soon</title>
+    <meta name="description" content="Smile Asana private lessons and the Playbook are coming soon." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="assets/logo-wide.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="Smile Asana Affirm">
-        <img src="assets/logo-wide.png" alt="Smile Asana" />
-      </a>
-      <nav class="top-nav" aria-label="Smile Asana navigation">
-        <a href="#affirm">Affirm</a>
-      </nav>
-    </header>
+    <main class="coming-soon" aria-labelledby="page-title">
+      <div class="coming-soon__content">
+        <p class="eyebrow">Smile Asana</p>
+        <h1 id="page-title">Practice with intention.</h1>
+        <p class="intro">Private lessons are now available. The Smile Asana Playbook is coming soon.</p>
+        <a class="lesson-link" href="#contact">Request a private lesson <span aria-hidden="true">↓</span></a>
 
-    <main id="top">
-      <nav class="tab-bar" aria-label="Smile Asana sections">
-        <a class="app-tab is-active" href="#affirm">Affirm</a>
-      </nav>
-
-      <section class="tab-panel" id="affirm" aria-label="Affirm">
-        <section class="hero">
-          <p class="signal-label">Affirm</p>
-          <h1>Teacher reflections for steadier practice.</h1>
-          <p>
-            Small paragraphs for yoga teachers to read before class, after class, or during the
-            quiet moments when confidence, clarity, and direction need a little room to return.
-          </p>
+        <section class="video-space" aria-label="Smile Asana introduction video coming soon">
+          <span>Intro video</span>
+          <p>Coming soon.</p>
         </section>
 
-        <section class="filter-section" id="library" aria-label="Affirm filters"></section>
+        <section class="contact" id="contact" aria-labelledby="contact-title">
+          <p class="eyebrow">Private lessons</p>
+          <h2 id="contact-title">Let’s practice together.</h2>
+          <p>Tell me a little about what you would like to work on and I’ll be in touch.</p>
+          <form class="contact-form" id="contact-form">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+            <label for="contact-email">Email address</label>
+            <input id="contact-email" name="email" type="email" autocomplete="email" required />
+            <label for="message">What would you like to work on?</label>
+            <textarea id="message" name="message" rows="4" placeholder="Your goals, experience, or questions" required></textarea>
+            <button type="submit">Send lesson request</button>
+            <p class="form-note" id="contact-note">I’ll respond with availability and next steps.</p>
+          </form>
+        </section>
 
-        <section class="featured-card" id="featured-card" aria-live="polite"></section>
-        <section class="affirmation-grid" id="reflections" aria-label="Affirm reflections"></section>
-      </section>
+        <section class="updates" aria-labelledby="updates-title">
+          <p class="eyebrow">Playbook updates</p>
+          <h2 id="updates-title">Stay in the loop.</h2>
+        <form class="email-form" id="email-form">
+          <label class="sr-only" for="email">Email address</label>
+          <div class="email-form__fields">
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="Your email address" required />
+            <button type="submit">Sign up</button>
+          </div>
+          <p class="form-note" id="form-note">Updates for private lessons and the Playbook launch.</p>
+        </form>
+        </section>
+      </div>
     </main>
-
-    <footer class="site-footer">
-      <span>Smile Asana</span>
-      <span>Affirm</span>
-    </footer>
-
     <script src="app.js"></script>
   </body>
 </html>
