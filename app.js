@@ -16,8 +16,8 @@ emailForm.addEventListener("submit", (event) => {
     return;
   }
 
-  const subject = encodeURIComponent("Smile Asana Playbook updates");
-  const body = encodeURIComponent(`Please add this email to Smile Asana Playbook updates:\n\n${emailInput.value}`);
+  const subject = encodeURIComponent("Mark Smith Yoga Playbook updates");
+  const body = encodeURIComponent(`Please add this email to Mark Smith Yoga Playbook updates:\n\n${emailInput.value}`);
   window.location.href = `mailto:${recipientEmail}?subject=${subject}&body=${body}`;
   formNote.textContent = "Your email app is opening to send the sign-up request.";
   formNote.classList.add("is-success");
@@ -32,7 +32,7 @@ contactForm.addEventListener("submit", (event) => {
     return;
   }
 
-  const subject = encodeURIComponent("Smile Asana private lesson request");
+  const subject = encodeURIComponent("Mark Smith Yoga private lesson request");
   const body = encodeURIComponent(
     `Name: ${contactName.value}\nEmail: ${contactEmail.value}\n\nWhat I would like to work on:\n${contactMessage.value}`,
   );
